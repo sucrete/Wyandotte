@@ -3,16 +3,15 @@ import Image from 'next/image';
 
 const History = () => {
   return (
-    <section className=" pb-[9rem] md:pb-[9rem] lg:pb-[12rem] z-21 relative">
+    <section className=" pb-[9rem] md:pb-[9rem] lg:pb-[14rem] z-21 relative">
       <div className="main-container flex justify-center relative w-full h-full">
-        <div className="overlay absolute bg-fade-to-white w-full h-full z-18 left-0 bottom-0"></div>
+        <div className="overlay absolute bg-fade-to-white w-full h-[300px] z-18 left-0 bottom-[10rem] after:content-[''] after:absolute after:left-0 after:top-[300px] after:w-full after:bg-[#fff] after:h-[250px]"></div>
         <div className="paper absolute w-[850px] h-[600px] max-w-full pt-[5rem] md:pt-[7rem] z-17 lg:pt-[9rem] rounded-[3px] shadow-2xl left-1/2 -translate-x-1/2 top-[-7rem] bg-[#ffffff]">
           <div className="border-box absolute inset-0 w-full h-full p-4">
             <div className="border w-full h-full border-[#cdd4c2]"></div>
-            <div className="white-bg"></div>
           </div>
         </div>
-        <div className="copy w-[650px] max-w-full pt-[5rem] md:pt-[7rem] lg:pt-[9rem] -mt-[11rem] relative z-20">
+        <div className="copy w-[650px] max-w-full pt-[5rem] md:pt-[7rem] lg:pt-[9rem] -mt-[10rem] relative z-20">
           <RevealAnimation delay={0.1}>
             <h2 className=" text-bushwood-700 pb-5">History</h2>
           </RevealAnimation>
