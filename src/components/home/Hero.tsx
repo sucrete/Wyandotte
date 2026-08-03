@@ -9,7 +9,7 @@ const Hero = async () => {
   const data = await fetchWeather();
   const currentTemp = data ? Math.round(data.current.temperature_2m) : '--';
   const label = data ? getWeatherLabel(data.current.weather_code, data.current.wind_speed_10m) : '';
-  const HeadingContent = () => <>A peaceful, secluded course in historic Cottage Grove.</>;
+  const HeadingContent = () => <>Your getaway from the<br/> day-to-day.</>;
 
   return (
     // saved classNames -> h-[99svh] xl:max-h-[90svh]
