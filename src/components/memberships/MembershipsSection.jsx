@@ -26,7 +26,7 @@ const MembershipsSection = ({ membershipsData }) => {
 
   return (
     <section className="rates-section  bg-background-2" id="memberships">
-      <div className="bg-[#f3f6e4]">
+      <div className="bg-[#f8feda]">
         <div className="main-container py-7 flex flex-row justify-center">
           <RevealAnimation delay={0.2} offset={10} className="w-[550px]">
             <div className="text-center">All rates subject to sales tax.</div>

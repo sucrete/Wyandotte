@@ -26,7 +26,7 @@ const CourseInfo = async () => {
     : 'Weather unavailable';
 
   return (
-    <section className="bg-[#f3f6e4] ">
+    <section className="bg-[#f8feda] ">
       <div className="main-container py-7  grid grid-cols-3">
         <div className="col-span-1">
           <RevealAnimation delay={0.3} offset={10}>

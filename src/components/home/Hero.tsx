@@ -3,19 +3,77 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import TemperaturePaneCard from './TemperaturePaneCard';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
+import Image from 'next/image';
 import { fetchWeather, getWeatherLabel } from '@/utils/weather';
 
 const Hero = async () => {
   const data = await fetchWeather();
   const currentTemp = data ? Math.round(data.current.temperature_2m) : '--';
   const label = data ? getWeatherLabel(data.current.weather_code, data.current.wind_speed_10m) : '';
-  const HeadingContent = () => <>Your getaway from the<br/> day-to-day.</>;
+  const HeadingContent = () => (
+    <>
+      Your{' '}
+      <span className="relative inline-block">
+        {/* Sibling of the gradient-text span below, not a descendant of it — a
+            descendant's z-index can never paint behind its ancestor's own
+            background, and background-clip:text renders the gradient glyphs
+            as part of that ancestor's background layer. Siblings stack by
+            z-index normally, so this is what actually lets it sit behind. */}
+        <span
+          aria-hidden="true"
+          // className="absolute -z-10 -left-[50%] translate-x-1/2 top-11 w-[200px] h-[30px] bg-[url('/images/shared/svgs/brush-1.svg')] bg-contain bg-no-repeat"
+        />
+        <span
+          className="relative z-10"
+          style={{
+            // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
+            // backgroundClip: 'text',
+            // WebkitBackgroundClip: 'text',
+            // WebkitTextFillColor: 'transparent',
+            // WebkitBoxDecorationBreak: 'clone',
+            // boxDecorationBreak: 'clone',
+          }}>
+          getaway
+        </span>
+      </span>{' '}
+      from the
+      <br /> day-to-day.
+    </>
+  );
 
   return (
     // saved classNames -> h-[99svh] xl:max-h-[90svh]
-    <section className="bg-cover bg-[url('/images/hero-images/hidden-1.jpg')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
-      <ParallaxImageBackground src="/images/hero-images/hidden-1.jpg" sizes="(max-width: 768px) 200vw, 100vw" />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] opacity-70 -z-1 bg-scrim-hero"></div>
+    <section className="bg-cover bg-[url('/images/peoria-ridge/Peoria-photog.jpg')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
+      <ParallaxImageBackground
+        src="/images/peoria-ridge/Peoria-photog.jpg"
+        offset="-20%"
+        sizes="(max-width: 768px) 200vw, 100vw"
+      />
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero"></div>
+
+      <div className="facebook-link absolute left-6 md:left-[6.25rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
+        <RevealAnimation delay={0.8} direction="left" offset={5}>
+          <a
+            href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Peoria Ridge Golf Course on Facebook (opens in new tab)"
+            className="block group w-[42px] h-[42px] hover:w-[124px] transition-[width] duration-[250ms] ease-in-out overflow-hidden rounded-full backdrop-blur-xl bg-white/10 border border-[#ffffff30] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_10px_rgba(236,236,236,0.18)]">
+            <img
+              src="/images/icons/f.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute left-[16px] top-1/2 -translate-y-1/2 h-[17px] w-auto"
+            />
+            <img
+              src="/images/icons/acebook.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute left-[25px] top-1/2 -translate-y-1/2 h-[17px] w-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </a>
+        </RevealAnimation>
+      </div>
 
       <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
@@ -28,25 +86,19 @@ const Hero = async () => {
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
               <h1
-                className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] area-light"
+                className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] area-light relative text-[#fff]"
                 style={{
-                  background: '#ffffff',
-                  backgroundImage:
-                    'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
-                  // textShadow: '0 0 45px white',
-                  backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  WebkitBoxDecorationBreak: 'clone',
-                  boxDecorationBreak: 'clone',
+                  // background: '#ffffff',
+                  // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
+                  // // textShadow: '0 0 45px white',
+                  // backgroundClip: 'text',
+                  // WebkitBackgroundClip: 'text',
+                  // WebkitTextFillColor: 'transparent',
+                  // WebkitBoxDecorationBreak: 'clone',
+                  // boxDecorationBreak: 'clone',
                 }}>
                 <HeadingContent />
               </h1>
-
-              {/* 3. The Shadow Heading (Ghost) */}
-              {/* <p className="hero-shadow-layer text-[5rem] -tracking-[2px]" aria-hidden="true">
-                <HeadingContent />
-              </p> */}
             </div>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>

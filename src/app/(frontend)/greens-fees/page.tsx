@@ -26,7 +26,7 @@ const GreensFees = async () => {
   return (
     <Fragment> 
       <main>
-        <HalfHero BGHeroSrc='/images/shared/feeling-this-fairway.jpg' imageOffset='-27%' imageHeight='170%' overlayOpacity='.35' heroText='Greens Fees'/>
+        <HalfHero BGHeroSrc='/images/peoria-ridge/banner-1.jpg' imageOffset='-7%' imageHeight='100%' overlayOpacity='.35' heroText='Greens Fees'/>
         {/* <Introduction /> */}
         {/* uncomment <Services/> to incorporate automatic carouselling gallery */}
         {/* <Services /> */}

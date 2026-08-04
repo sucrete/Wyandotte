@@ -27,7 +27,7 @@ const TemperaturePaneCard = ({ currentTemp, label }: TemperaturePaneCardProps) =
   return (
     <div
       ref={cardRef}
-      className="overflow-hidden w-[185px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[inset_0_0_25px_rgba(255,255,255,.5),0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
+      className="overflow-hidden w-[185px] h-fit rounded-lg border-1 border-[#ffffff10] backdrop-blur-xl bg-[#ffffff2c] shadow-[inset_0_0_25px_rgba(255,255,255,.3),0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02)]">
       <div className="temp-wrapper text-center p-[20px_20px_18px_20px] w-fit">
         <div className="monospaced weather text-[#ffffff] pb-1 text-[10px]">{label}</div>
         <div className="temperature font-body flex justify-center text-accent mr-[-3px]">

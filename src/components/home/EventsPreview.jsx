@@ -71,7 +71,7 @@ const EventsPreview = () => {
     <section className="pt-0 pb-16 md:py-20 lg:py-[200px] bg-[#fafafa] overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-2 lg:px-20 xl:px-25">
         {/* bg-[radial-gradient(ellipse_500%_180%_at_40%_0%,#fff,#f6ffe6)]  */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 md:gap-10 lg:gap-24 relative isolate rounded-2xl p-2 bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#fff,#f4f4f4)] overflow-hidden before:content-[''] before:absolute before:inset-0 before:-z-10 before:pointer-events-none before:bg-[url('/images/shared/noise-2.png')] before:bg-repeat before:bg-[length:180px_180px] before:opacity-30 shadow-[inset_0_2px_12px_-6px_rgba(0,0,0,0.08)] border-t-[1px] border-t-[rgba(0,0,0,0.0356)] border-b border-white">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 md:gap-10 lg:gap-24 relative isolate rounded-[21px] p-2 bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#fff,#f4f4f4)] overflow-hidden before:content-[''] before:absolute before:inset-0 before:-z-10 before:pointer-events-none before:bg-[url('/images/shared/noise-2.png')] before:bg-repeat before:bg-[length:180px_180px] before:opacity-30 shadow-[inset_0_2px_12px_-6px_rgba(0,0,0,0.08)] border-t-[1px] border-t-[rgba(0,0,0,0.0356)] border-b border-white">
           {/* Left — 33% */}
           <div className="lg:col-span-1 flex flex-col justify-between pt-[2rem] pl-[2rem] pb-[2rem]">
             {/* <RevealAnimation delay={0.1}>
@@ -87,7 +87,7 @@ const EventsPreview = () => {
             </div>
 
             <RevealAnimation delay={0.3}>
-              <LinkButton href="/events" className="btn btn-md btn-accent w-fit ml-[2px]">
+              <LinkButton href="/events" className="btn btn-md btn-accent border-stroke-3/30 w-fit ml-[2px]">
                 See all events
               </LinkButton>
             </RevealAnimation>
@@ -100,8 +100,8 @@ const EventsPreview = () => {
                 {upcomingEvents.map((event, index) => (
                   <li key={event.id}>
                     <RevealAnimation delay={0.2 + index * 0.1} offset={20}>
-                      <div className="grid grid-cols-5 gap-8 rounded-[12px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#007e61,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
-                        <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[6px]">
+                      <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#afcac3,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
+                        <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[9px]">
                           {formatEventDate(event.date)}
                         </div>
                         <div className="col-span-4 pt-6 pr-6 pb-6 pl-1">

@@ -4,26 +4,30 @@ import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 import { SmallArrow } from '../ui/Icons';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const IntrasiteLinks = [
   {
     id: 1,
     URL: '/greens-fees',
     text: 'Greens Fees',
-    imgURL: '/images/shared/another-morning-scene.webp',
+    imgURL: '/images/peoria-ridge/promo-4.jpg',
   },
   {
     id: 2,
     URL: '/course',
     text: 'Course',
-    imgURL: '/images/shared/course-8.jpg',
+    imgURL: '/images/peoria-ridge/course-banner.webp',
   },
   {
     id: 3,
     URL: '/book-tee-time',
     text: 'Book Tee Time',
-    imgURL: '/images/hero-images/carts-amongst-the-pines.jpg',
+    imgURL: '/images/home/close-up-golfer.jpg',
   },
 ];
 
@@ -82,10 +86,27 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
 };
 
 const Links = () => {
+  const ref = useRef(null);
+
+  useGSAP(
+    () => {
+      ScrollTrigger.create({
+        trigger: ref.current,
+        start: 'top 80%',
+        end: 'top 40%',
+        once: true,
+        toggleClass: { targets: ref.current, className: 'bg-[#ececec]' },
+      });
+    },
+    { scope: ref },
+  );
+
   return (
     <section className="py-7 md:py-20 lg:py-[70px] xl:py-[80px] relative bg-background-2">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16 ">
-        <div className="rounded-[25px] md:rounded-[32px] overflow-hidden p-4 md:p-6 bg-[#ececec] shadow-[inset_1px_1px_0_rgba(255,255,255,0.75),inset_0_0_5px_rgba(255,255,255,0.75)]">
+        <div
+          ref={ref}
+          className="rounded-[25px] md:rounded-[32px] overflow-hidden p-4 md:p-6 transition-colors duration-250 shadow-[inset_1px_1px_0_rgba(255,255,255,0.75),inset_0_0_5px_rgba(255,255,255,0.75)]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
             {IntrasiteLinks.map((linkItem, index) => (
               <RevealAnimation key={linkItem.id} delay={index * 0.1}>
