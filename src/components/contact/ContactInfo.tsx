@@ -12,24 +12,24 @@ import Map from '../shared/Map';
 const contactInfoItems = [
   {
     id: 1,
-    src: '/images/icons/map.svg',
-    imageSize: { w: 22, h: 22 },
+    src: '/images/icons/map-green.svg',
+    imageSize: { w: 15, h: 15 },
     title: 'Our Address',
     content: '10301 S 600 Rd., Miami, OK 74354',
     link: 'https://maps.app.goo.gl/1HW777MnJyKpHs5L8',
   },
   {
     id: 2,
-    src: '/images/icons/email-2.svg',
-    imageSize: { w: 22, h: 22 },
+    src: '/images/icons/email-2-green.svg',
+    imageSize: { w: 15, h: 15 },
     title: 'Email Us',
     content: 'info@wyandottegolfcourse.com',
     link: 'mailto:info@wyandottegolfcourse.com',
   },
   {
     id: 3,
-    src: '/images/icons/lineal-phone.svg',
-    imageSize: { w: 22, h: 22 },
+    src: '/images/icons/lineal-phone-green.svg',
+    imageSize: { w: 15, h: 15 },
     title: 'Call Us',
     content: '(918) 542-7676',
     link: 'tel:9185427676',
@@ -58,14 +58,16 @@ const ContactInfo = () => {
               {contactInfoItems.map((item) => (
                 <RevealAnimation key={item.id} delay={0.4}>
                   <div className="bg-accent rounded-[20px] p-11 space-y-6 w-full md:max-w-[371px] text-center relative overflow-hidden">
-                    <figure className="size-10 overflow-hidden mx-auto">
-                      <Image
-                        src={item.src}
-                        alt=""
-                        width={item.imageSize.w}
-                        height={item.imageSize.h}
-                        className="size-full object-cover"
-                      />
+                    <figure className="size-12 mx-auto">
+                      <div className="icon-wrapper rounded-[8px] bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#f8feda,#e8edca)] p-2 shadow-sm">
+                        <Image
+                          src={item.src}
+                          alt=""
+                          width={item.imageSize.w}
+                          height={item.imageSize.h}
+                          className="size-full object-cover"
+                        />
+                      </div>
                     </figure>
                     <div className="space-y-2.5">
                       <p className="text-heading-6 text-black">{item.title}</p>
@@ -81,7 +83,7 @@ const ContactInfo = () => {
             </div>
             {/* contact form */}
             <div className="second-column flex-1 self-stretch min-h-0 w-full max-w-[847px]">
-              <RevealAnimation delay={0.3} className='h-full'>
+              <RevealAnimation delay={0.3} className="h-full">
                 <div className="rounded-[20px] bg-white p-2.5 w-full h-full">
                   <div className="w-full h-full overflow-hidden rounded-2xl">
                     <Map />
