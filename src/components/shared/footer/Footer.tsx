@@ -1,7 +1,7 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import { Logo } from '@/components/svg-components/Logos';
-import facebook from '@public/images/shared/facebook-logo.svg';
+import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,8 +34,19 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                     <Logo className="fill-white w-full h-auto" />
                   </figure>
                 </Link>
+                <div className="flex items-center gap-3 mt-5">
+                  <Link target="_blank" href="https://www.facebook.com/PeoriaRidgeGolfCourse/#" className="footer-social-link">
+                    <span className="sr-only">Facebook</span>
+                    <Image className="size-6" src={facebook} alt="Facebook" />
+                  </Link>
+                  <div className="bg-stroke-1/25 h-6 w-px"></div>
+                  <Link target="_blank" href="https://www.instagram.com/peoriaridgegc/" className="footer-social-link">
+                    <span className="sr-only">Instagram</span>
+                    <Image className="size-6" src={instagram} alt="Instagram" />
+                  </Link>
+                </div>
 
-                <div className="flex items-center gap-3 mt-5"></div>
+                <div className="flex items-center gap-3 mt-2"></div>
                 <p className="text-accent/60 text-tagline-1 mt-4 text-center">
                   Pro Shop Hours: 7:30am - 9pm, Clubhouse Hours: 8:00am - 9:00pm
                 </p>

@@ -58,8 +58,8 @@ const ContactInfo = () => {
               {contactInfoItems.map((item) => (
                 <RevealAnimation key={item.id} delay={0.4}>
                   <div className="bg-accent rounded-[20px] p-11 space-y-6 w-full md:max-w-[371px] text-center relative overflow-hidden">
-                    <figure className="size-12 mx-auto">
-                      <div className="icon-wrapper rounded-[8px] bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#f8feda,#e8edca)] p-2 shadow-sm">
+                    <figure className="size-11 mx-auto">
+                      <div className="icon-wrapper rounded-[8px] bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#f8feda,#e8edca)] p-3 shadow-sm">
                         <Image
                           src={item.src}
                           alt=""
@@ -70,7 +70,7 @@ const ContactInfo = () => {
                       </div>
                     </figure>
                     <div className="space-y-2.5">
-                      <p className="text-heading-6 text-black">{item.title}</p>
+                      <p className="text-[18px] text-black">{item.title}</p>
                       <p className="text-black/60 transition-color duration-300 ease-in-out hover:text-black">
                         <Link href={item.link} target="_blank">
                           {item.content}
