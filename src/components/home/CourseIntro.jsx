@@ -1,7 +1,7 @@
 'use client';
 
-import copse from '@public/images/peoria-ridge/promo-1.jpg';
-import vertImage from '@public/images/peoria-ridge/wyandotte-vert.jpg';
+import copse from '@public/images/peoria-ridge/sweet-man.jpg';
+import vertImage from '@public/images/peoria-ridge/usa-pin-flag.jpg';
 
 import Image from 'next/image';
 import { useRef } from 'react';
