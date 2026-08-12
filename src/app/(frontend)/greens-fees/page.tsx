@@ -17,7 +17,7 @@ import { RATES_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Greens Fees | Wyandotte Golf Course in Cottage Grove, OR',
+  title: 'Greens Fees | Fire Ridge Golf Course in Cottage Grove, OR',
 };
 
 const GreensFees = async () => {
@@ -26,7 +26,7 @@ const GreensFees = async () => {
   return (
     <Fragment> 
       <main>
-        <HalfHero BGHeroSrc='/images/peoria-ridge/banner-1.jpg' imageOffset='-7%' imageHeight='100%' overlayOpacity='.35' heroText='Greens Fees'/>
+        <HalfHero BGHeroSrc='/images/peoria-ridge/unnamed-2.webp' imageOffset='-7%' imageHeight='100%' overlayOpacity='.5' heroText='Greens Fees'/>
         {/* <Introduction /> */}
         {/* uncomment <Services/> to incorporate automatic carouselling gallery */}
         {/* <Services /> */}

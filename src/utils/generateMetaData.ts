@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 // TODO: replace with the real production domain once the course name is finalized.
 export const DEFAULT_URL = 'https://wyandottegolf.com/';
-export const DEFAULT_TITLE = 'Wyandotte Golf Course | Cottage Grove, Oregon';
+export const DEFAULT_TITLE = 'Fire Ridge Golf Course | Miami, Oklahoma';
 export const DEFAULT_DESCRIPTION =
-  'Wyandotte Golf Course in Cottage Grove, OR. A scenic public golf course nestled in the beautiful Willamette Valley, offering a welcoming experience for golfers of all skill levels.';
+  'Fire Ridge Golf Course in Miami, OK, a scenic par 72 public golf course designed by renowned architect Bland Pittman';
 export const DEFAULT_IMAGE_URL = `${DEFAULT_URL}images/hero-images/carts-amongst-the-pines.jpg`;
 
 
@@ -13,9 +13,12 @@ const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
+  icons: {
+    icon: '/images/icons/fire.svg',
+  },
   openGraph: {
     type: 'website',
-    siteName: 'Wyandotte Golf Course',
+    siteName: 'Fire Ridge Golf Course',
     url: DEFAULT_URL,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,

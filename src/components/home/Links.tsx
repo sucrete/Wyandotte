@@ -19,8 +19,8 @@ const IntrasiteLinks = [
   },
   {
     id: 2,
-    URL: '/course',
-    text: 'Course',
+    URL: '/bar-and-grill',
+    text: 'Bar & Grill',
     imgURL: '/images/peoria-ridge/course-banner.webp',
   },
   {

@@ -43,7 +43,7 @@ const CourseIntro = () => {
             <div className="flex flex-row">
               {/* <Image src={'/images/shared/three-marbles.svg'} className="pr-2" width={30} height={8} alt=""></Image> */}
               <RevealAnimation delay={.6} direction="left" offset={10}>
-                <span className="green-circle size-[9px] bg-ns-green rounded-full inline-block mr-2"></span>
+                <span className="green-circle size-[9px] bg-taxi-cab rounded-full inline-block mr-2"></span>
               </RevealAnimation>
               <RevealAnimation delay={.2} direction="left" offset={10}>
                 <span className="monospaced relative -top-[1px] text-[#949494]">About Us</span>
@@ -59,7 +59,7 @@ const CourseIntro = () => {
             <RevealAnimation delay={0.3} direction="left" offset={20}>
               <div className="space-y-4">
                 <p className="text-primary/70">
-                  Nestled amidst the serene landscapes of Northeast Oklahoma, Peoria Ridge offers an inviting 18-hole,
+                  Nestled amidst the serene landscapes of Northeast Oklahoma, Fire Ridge offers an inviting 18-hole,
                   Par 72 championship experience designed by renowned architect Bland Pittman. Five sets of tee boxes
                   accommodate golfers of every skill level, ensuring both challenge and enjoyment.
                 </p>
@@ -83,7 +83,7 @@ const CourseIntro = () => {
             {/* Large portrait image */}
             <RevealAnimation delay={0.2} direction="right" className="absolute left-0 top-0 w-[85%] lg:w-[68%] h-full">
               <div className="relative h-full rounded-2xl overflow-hidden shadow-lg">
-                <Image src={vertImage} alt="Wyandotte Golf Course" fill className="object-cover" />
+                <Image src={vertImage} alt="Fire Ridge Golf Course" fill className="object-cover" />
               </div>
             </RevealAnimation>
 
@@ -92,7 +92,7 @@ const CourseIntro = () => {
               ref={floatingRef}
               className="absolute bottom-[-10px] right-0 w-[52%] aspect-[4/3] rounded-xl overflow-hidden shadow-2xl border-4 border-white "
               style={{ willChange: 'transform' }}>
-              <Image src={copse} alt="cute dog hanging out on a Wyandotte fairway" fill className="object-cover" />
+              <Image src={copse} alt="cute dog hanging out on a Fire Ridge fairway" fill className="object-cover" />
             </div>
           </div>
         </div>

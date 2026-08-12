@@ -172,6 +172,27 @@ table {
     hsla(0, 0%, 0%, 0.08) 100%
   );
 }
+@utility bg-scrim-hero-darker {
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.8) 0%,
+    hsla(0, 0%, 0%, 0.706) 3.1%,
+    hsla(0, 0%, 0%, 0.623) 6.2%,
+    hsla(0, 0%, 0%, 0.55) 9.4%,
+    hsla(0, 0%, 0%, 0.487) 12.8%,
+    hsla(0, 0%, 0%, 0.433) 16.6%,
+    hsla(0, 0%, 0%, 0.388) 20.8%,
+    hsla(0, 0%, 0%, 0.349) 25.6%,
+    hsla(0, 0%, 0%, 0.318) 31.1%,
+    hsla(0, 0%, 0%, 0.294) 37.4%,
+    hsla(0, 0%, 0%, 0.274) 44.7%,
+    hsla(0, 0%, 0%, 0.26) 53.1%,
+    hsla(0, 0%, 0%, 0.25) 62.7%,
+    hsla(0, 0%, 0%, 0.244) 73.6%,
+    hsla(0, 0%, 0%, 0.241) 86%,
+    hsla(0, 0%, 0%, 0.24) 100%
+  );
+}
 
 /* Fades a light image into a white surface beneath it — used to blend a card's
    top image into its body instead of a hard edge. */
@@ -755,6 +776,58 @@ Common Styles all over the sites
 }
 .gradient-line-8 {
   animation: top-to-bottom 6s 1200ms linear infinite;
+}
+
+/* Cycles the FireRidgeLogoFull flame paths through actual fire colors —
+   deep ember red up through vivid orange (outer) or all the way to gold
+   (inner) — at a quick, flickery pace rather than a slow drift. The 100%
+   stop repeats the 0% color so the loop has no visible seam. Only applies
+   to a logo instance given the .fiery class (e.g.
+   <FireRidgeLogoFull className="fiery" />). flame-outer and flame-inner run
+   independent palettes/durations so the two layers flicker out of sync
+   instead of moving in lockstep — inner runs hotter/yellower than outer. */
+@keyframes flame-color-cycle {
+  0% {
+    fill: oklab(34.094% 0.10732 0.06847);
+  }
+  25% {
+    fill: oklab(48.205% 0.14389 0.0969);
+  }
+  50% {
+    fill: oklab(53.186% 0.15265 0.10698);
+  }
+  75% {
+    fill: oklab(43.165% 0.12538 0.08581);
+  }
+  100% {
+    fill: oklab(34.094% 0.10732 0.06847);
+  }
+}
+
+@keyframes flame-inner-color-cycle {
+  0% {
+    fill: #d1480a;
+  }
+  25% {
+    fill: #d97012;
+  }
+  50% {
+    fill: #dba030;
+  }
+  75% {
+    fill: #d97012;
+  }
+  100% {
+    fill: #d1480a;
+  }
+}
+
+.fiery .flame-outer {
+  animation: flame-color-cycle 4s ease-in-out infinite;
+}
+
+.fiery .flame-inner {
+  animation: flame-inner-color-cycle 3.2s ease-in-out infinite;
 }
 
 .table-of-contents .table-of-list li {

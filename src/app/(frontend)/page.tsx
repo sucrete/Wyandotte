@@ -14,7 +14,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Wyandotte Golf Course | A scenic golf destination in Cottage Grove, OR.',
+  title: 'Fire Ridge Golf Course | A scenic golf destination in Cottage Grove, OR.',
 };
 
 const Home = async () => {

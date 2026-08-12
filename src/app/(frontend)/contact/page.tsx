@@ -11,7 +11,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Contact Us | Wyandotte Golf Course in Cottage Grove, OR',
+  title: 'Contact Us | Fire Ridge Golf Course in Cottage Grove, OR',
 };
 
 const Contact = () => {
@@ -19,10 +19,10 @@ const Contact = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/hero-images/hv-5.webp"
-          imageOffset="-40%"
-          imageHeight="190%"
-          overlayOpacity=".55"
+          BGHeroSrc="/images/peoria-ridge/parallax-bg.jpg"
+          imageOffset="-20%"
+          imageHeight="120%"
+          overlayOpacity=".25"
           heroText="Contact Us"
         />
         <ContactInfo />

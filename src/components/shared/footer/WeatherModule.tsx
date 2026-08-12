@@ -51,20 +51,20 @@ const WeatherModule = async () => {
     : ([] as ForecastDay[]);
 
   return (
-    <div className="weather-container flex flex-row items-center pr-6 bg-[#001914] md:bg-[#001e18] p-2 ml-auto justify-between rounded-2xl">
-      <div className="today-weather-container basis-[55%] sm:basis-[35%] bg-[#01251e] text-accent flex flex-col px-6 py-4 rounded-[12px] items-center justify-between space-y-3 realistic-shadow-md border-1 border-[#66727012]">
+    <div className="weather-container flex flex-row items-center pr-6 bg-[#1f0000] md:bg-[#1b0000] p-2 ml-auto justify-between rounded-2xl border-b border-fr-primary-500/15">
+      <div className="today-weather-container basis-[55%] sm:basis-[35%] bg-fr-primary-900 text-accent flex flex-col px-6 py-4 rounded-[12px] items-center justify-between space-y-3 realistic-shadow-md border-1 border-[#aeaeae12]">
         <div className="today-weather flex flex-col justify-between items-center space-y-3 w-full">
           <div className="weather text-[13px] flex flex-row items-center">
-            <span className="flex text-ns-green">{label}</span>
+            <span className="flex text-taxi-cab">{label}</span>
             <span className="today-weather-icon-box size-[15px] inline-block ml-3 overflow-hidden">
-              <CurrentIcon className="fill-ns-green size-full" />
+              <CurrentIcon className="fill-taxi-cab size-full" />
             </span>
           </div>
-          <div className="today-temperature text-[1.5rem] leading-[.75] block text-ns-green">
+          <div className="today-temperature text-[1.5rem] leading-[.75] block text-taxi-cab">
             <span className="temperature tracking-[1px] semibold">{currentTemp}</span>°
           </div>
         </div>
-        <div className="weather-header text-ns-green text-[13px]">Miami, OK</div>
+        <div className="weather-header text-taxi-cab text-[13px]">Miami, OK</div>
       </div>
 
       <div className="flex flex-row justify-between w-[40%] sm:w-[60%]">

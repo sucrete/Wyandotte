@@ -5,7 +5,7 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Image from 'next/image';
 
-// Placeholder events — replace with real Wyandotte events (or a Sanity query) when available.
+// Placeholder events — replace with real Fire Ridge events (or a Sanity query) when available.
 // `date` is an ISO day string; `linkQuestionMark` controls whether the item renders a link.
 export const events = [
   {
@@ -41,10 +41,10 @@ const formatEventDate = (date) => {
 
   return (
     <div className="mx-auto w-fit flex flex-col ">
-      <span className="event-month text-center monospaced text-bushwood-700/70">
+      <span className="event-month text-center monospaced text-fr-primary-800/70">
         {parsed.toLocaleDateString('en-US', { month: 'short' })}
       </span>
-      <span className="event-day font-body text-[2.5rem] text-center area-600 leading-[1.1] text-bushwood-700">
+      <span className="event-day font-body text-[2.5rem] text-center area-600 leading-[1.1] text-fr-primary-800">
         {parsed.toLocaleDateString('en-US', { day: 'numeric' })}
       </span>
     </div>
@@ -80,18 +80,18 @@ const EventsPreview = () => {
                 <Image className="size-[60px] -ml-3" src="/images/home/golf-ball.png" width={300} height={300} alt="" />
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="leading-[1.1] text-[2.5rem] text-bushwood-700 pb-4 -ml-1">
+                <h2 className="leading-[1.1] text-[2.5rem] text-fr-primary-800 pb-4 -ml-1">
                   Upcoming <br />
                   Events
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="text-black/60 pb-5">Take a look at what's coming up at Wyandotte Golf Course!</p>
+                <p className="text-black/60 pb-5">Take a look at what's coming up at Fire Ridge Golf Course!</p>
               </RevealAnimation>
             </div>
 
             <RevealAnimation delay={0.3}>
-              <LinkButton href="/events" className="btn btn-md btn-accent border-stroke-3/30 w-fit ml-[2px]">
+              <LinkButton href="/events" className="btn btn-md btn-header-bushwood hover:btn-white-dark w-fit ml-[2px]">
                 See all events
               </LinkButton>
             </RevealAnimation>
@@ -104,7 +104,7 @@ const EventsPreview = () => {
                 {upcomingEvents.map((event, index) => (
                   <li key={event.id}>
                     <RevealAnimation delay={0.2 + index * 0.1} offset={20}>
-                      <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#afcac3,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
+                      <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#5800013a,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
                         <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[9px]">
                           {formatEventDate(event.date)}
                         </div>

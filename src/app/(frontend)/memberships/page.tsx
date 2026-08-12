@@ -11,7 +11,7 @@ import { MEMBERSHIPS_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Memberships | Wyandotte Golf Course',
+  title: 'Memberships | Fire Ridge Golf Course',
 };
 
 const Memberships = async () => {
@@ -21,9 +21,9 @@ const Memberships = async () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/feeling-this-fairway.jpg"
-          imageOffset="-27%"
-          imageHeight="170%"
+          BGHeroSrc="/images/peoria-ridge/banner-2.jpg"
+          imageOffset="-7%"
+          imageHeight="110%"
           overlayOpacity=".35"
           heroText="Memberships"
         />

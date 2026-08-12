@@ -11,7 +11,7 @@ import { EVENTS_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Events | Wyandotte Golf Course',
+  title: 'Events | Fire Ridge Golf Course',
 };
 
 const Events = async () => {
@@ -21,10 +21,10 @@ const Events = async () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/feeling-this-fairway.jpg"
-          imageOffset="-27%"
-          imageHeight="170%"
-          overlayOpacity=".35"
+          BGHeroSrc="/images/peoria-ridge/gorg.jpg"
+          imageOffset="-7%"
+          imageHeight="110%"
+          overlayOpacity=".25"
           heroText="Events"
         />
         <CalendarComponent eventsData={eventsData} />

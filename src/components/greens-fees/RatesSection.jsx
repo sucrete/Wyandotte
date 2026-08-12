@@ -13,7 +13,7 @@ const RatesSection = ({ ratesSectionData }) => {
         <RevealAnimation delay={0.1}>
           <div className="table-wrapper">
             <div className="table-preface pb-5">
-              <h3 className="lg:max-w-1/2 text-[1.75rem] text-bushwood-700 md:text-[3rem] pb-[.7rem]">{standard.standardRatesHeading}</h3>
+              <h3 className="lg:max-w-1/2 text-[1.75rem] text-fr-primary-800 md:text-[2.5rem] pb-[.7rem]">{standard.standardRatesHeading}</h3>
               {standard.standardRatesDescription && (
                 <p className="lg:max-w-1/2">{standard.standardRatesDescription} </p>
               )}
@@ -77,7 +77,7 @@ const RatesSection = ({ ratesSectionData }) => {
           <div className="table-wrapper pt-[5rem] md:pt-[7rem]">
             <hr className="opacity-10 pb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="lg:max-w-1/2 text-[1.75rem] text-bushwood-700 md:text-[3rem] pb-[.7rem]">{misc.miscHeading}</h3>
+              <h3 className="lg:max-w-1/2 text-[1.75rem] text-fr-primary-800 md:text-[2.5rem] pb-[.7rem]">{misc.miscHeading}</h3>
               {misc.miscDescription?.length > 0 && <p className="lg:max-w-1/2">{misc.miscDescription} </p>}
             </div>
             <table className="table-auto table-striped table-striped-3">
@@ -150,7 +150,7 @@ const RatesSection = ({ ratesSectionData }) => {
           <div className="table-wrapper pt-[5rem] md:pt-[7rem]">
             <hr className="opacity-10 pb-[2rem]" />
             <div className="table-preface pb-5">
-              <h3 className="lg:max-w-1/2 text-[1.75rem] text-bushwood-700 md:text-[3rem] pb-[.7rem]">{golfPass.golfPassHeading}</h3>
+              <h3 className="lg:max-w-1/2 text-[1.75rem] text-fr-primary-800 md:text-[2.5rem] pb-[.7rem]">{golfPass.golfPassHeading}</h3>
               {golfPass.golfPassDescription?.length > 0 && (
                 <p className="lg:max-w-1/2">{golfPass.golfPassDescription} </p>
               )}

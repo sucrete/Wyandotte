@@ -2,7 +2,7 @@
 All the varaiables are added here
 =========================== */
 .test-bed {
-  color:   #006c51;
+  color: oklch(18.66% 0.07657 29.223);
 }
 
 @theme {
@@ -10,6 +10,8 @@ All the varaiables are added here
   --font-body: 'area-variable', sans-serif;
   --font-monospace: 'ibm-plex-mono', monospace;
   /* =============== COLORS =============== */
+  /* --color-fr-primary: #580001; */
+  --color-taxi-cab: #ffd333;
   --color-bushwood-50: #ebfef6;
   --color-bushwood-100: #cffce8;
   --color-bushwood-200: #a3f7d5;
@@ -31,6 +33,19 @@ All the varaiables are added here
   --color-primary-600: #7c31f6;
   --color-primary-700: #6d1fe2;
   --color-primary-800: #5a19be;
+
+  --color-fr-primary-50: oklch(94.3% 0.029 17.67);
+  --color-fr-primary-100: oklch(88.97% 0.058 18.3);
+  --color-fr-primary-200: oklch(78.84% 0.123 20.19);
+  --color-fr-primary-300: oklch(70.44% 0.187 23.19);
+  --color-fr-primary-400: oklch(64.89% 0.237 26.97);
+  --color-fr-primary-500: oklch(62.8% 0.258 29.23);
+  --color-fr-primary-600: oklch(53.08% 0.218 29.23);
+  --color-fr-primary-700: oklch(42.89% 0.176 29.23);
+  --color-fr-primary-800: oklch(32.04% 0.131 29.23);
+  --color-fr-primary-900: oklch(20.16% 0.083 29.23);
+  --color-fr-primary: oklch(16.35% 0.067 29.23);
+
   --color-heading-green: #004b31;
   --color-secondary: #1a1a1c;
   --color-accent: #fcfcfc;

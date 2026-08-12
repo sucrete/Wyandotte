@@ -7,7 +7,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Bar & Grill | Wyandotte Golf Course',
+  title: 'Bar & Grill | Fire Ridge Golf Course',
 };
 
 const BarAndGrill = () => {

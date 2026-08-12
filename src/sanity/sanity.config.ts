@@ -10,7 +10,7 @@ import './custom.css';
 
 export default defineConfig({
   name: 'default',
-  title: 'Wyandotte Golf Course',
+  title: 'Fire Ridge Golf Course',
   basePath: '/studio',
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,

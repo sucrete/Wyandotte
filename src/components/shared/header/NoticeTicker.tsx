@@ -59,7 +59,7 @@ export default function NoticeTicker({ isScrolled, notices, visible }: NoticeTic
     <div
       ref={barRef}
       className={cn(
-        'fixed top-0 left-0 w-full z-[51] bg-ns-dark-green text-white monospaced h-[36px] flex items-center justify-center overflow-hidden',
+        'fixed top-0 left-0 w-full z-[51] bg-fr-primary-900 text-white monospaced h-[36px] flex items-center justify-center overflow-hidden',
         'sm:text-[12px]',
       )}>
       <div className="relative h-full flex items-center justify-center w-full">

@@ -1,6 +1,6 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
-import { Logo } from '@/components/svg-components/Logos';
+import { Logo, FireRidgeLogoFull } from '@/components/svg-components/Logos';
 import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
@@ -11,8 +11,6 @@ import WeatherModule from './WeatherModule';
 
 import TQSGears from './TQSGears';
 
-import { BushwoodLogoScript } from '@/components/svg-components/BushwoodLogos';
-
 interface FooterOneProps {
   className?: string;
 }
@@ -21,7 +19,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
   return (
     <footer
       className={cn(
-        'bg-[#00251e] relative h-auto xl:h-[800px] bg-[radial-gradient(ellipse_400%_120%_at_40%_0%,#01251e,#011914)]',
+        'bg-[#00251e] relative h-auto xl:h-[600px] bg-[radial-gradient(ellipse_400%_120%_at_40%_0%,#330000,#110000)]',
         className,
       )}>
       <div className="main-container">
@@ -30,12 +28,15 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px] flex flex-col items-center mx-auto xl:mx-0">
                 <Link href="/">
-                  <figure className="max-w-[250px] mt-[5px]">
-                    <Logo className="fill-white w-full h-auto" />
+                  <figure className="max-w-[175px] mt-[5px]">
+                    <FireRidgeLogoFull />
                   </figure>
                 </Link>
                 <div className="flex items-center gap-3 mt-5">
-                  <Link target="_blank" href="https://www.facebook.com/PeoriaRidgeGolfCourse/#" className="footer-social-link">
+                  <Link
+                    target="_blank"
+                    href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
+                    className="footer-social-link">
                     <span className="sr-only">Facebook</span>
                     <Image className="size-6" src={facebook} alt="Facebook" />
                   </Link>
@@ -47,9 +48,9 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 </div>
 
                 <div className="flex items-center gap-3 mt-2"></div>
-                <p className="text-accent/60 text-tagline-1 mt-4 text-center">
+                {/* <p className="text-accent/60 text-tagline-1 mt-4 text-center">
                   Pro Shop Hours: 7:30am - 9pm, Clubhouse Hours: 8:00am - 9:00pm
-                </p>
+                </p> */}
 
                 <div className=" flex flex-col text-center">
                   <Link
@@ -131,7 +132,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
                   <Link href="/studio" className="" target="_blank">
                     <p className="text-tagline-1 text-accent/60">
-                      Copyright Wyandotte Golf Course © {new Date().getFullYear()}
+                      Copyright Fire Ridge Golf Course © {new Date().getFullYear()}
                     </p>
                   </Link>
                 </RevealAnimation>
@@ -146,13 +147,13 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
             </div>
           </div>
         </div>
-        <div className="relative pt-[35px] pb-[100px] text-center">
+        {/* <div className="relative pt-[35px] pb-[100px] text-center">
           <RevealAnimation delay={0.7} offset={5} duration={2}>
             <div>
               <Logo className="fill-[#012d25]" markClassName="fill-[#012d25]" />
             </div>
           </RevealAnimation>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

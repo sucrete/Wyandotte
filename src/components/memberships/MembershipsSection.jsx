@@ -26,7 +26,7 @@ const MembershipsSection = ({ membershipsData }) => {
 
   return (
     <section className="rates-section  bg-background-2" id="memberships">
-      <div className="bg-[#f8feda]">
+      <div className="bg-[#f7f4e7]">
         <div className="main-container py-7 flex flex-row justify-center">
           <RevealAnimation delay={0.2} offset={10} className="w-[550px]">
             <div className="text-center">All rates subject to sales tax.</div>
@@ -59,7 +59,7 @@ const MembershipsSection = ({ membershipsData }) => {
                       separate from the hover-gradient overlay below so it isn't tied to hover opacity. */}
                   <div className="pointer-events-none absolute inset-0 z-10 rounded-[20px] shadow-[inset_0_0_0_1px_oklab(0.93_0_0/0.35)]" />
                   {/* Gradient only visible on hover — cue taken from HeroUI's card component */}
-                  <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-bushwood-600/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-fr-primary-800/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   <div className="relative h-[175px] w-full shrink-0 image-section">
                     <Image src={TIER_IMAGES[prefix]} alt="" fill className="object-cover" />
@@ -69,7 +69,7 @@ const MembershipsSection = ({ membershipsData }) => {
 
                   <div className="px-8 pt-6 pb-11 flex flex-col flex-1 h-full justify-between">
                     <div className="section-1">
-                      <h3 className="text-heading-5 md:text-[1.75rem] pb-4 text-bushwood-700">{heading}</h3>
+                      <h3 className="text-heading-5 md:text-[1.75rem] pb-4 ">{heading}</h3>
 
                       {description && <p className="text-primary/70">{description}</p>}
                       <div className="flex justify-center gap-8 pt-4">

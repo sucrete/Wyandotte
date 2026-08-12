@@ -21,7 +21,7 @@ const HalfHero = ({
 }: HalfHeroProps) => {
   return (
     // saved classNames ->  h-[99svh] xl:max-h-[90svh]
-    <section className=" bg-bushwood bg-cover bg-top bg-no-repeat relative z-20 h-[280px] sm:h-[380px] md:h-[500px] overflow-hidden">
+    <section className=" bg-fr-primary bg-cover bg-top bg-no-repeat relative z-20 h-[280px] sm:h-[380px] md:h-[500px] overflow-hidden">
       {/* <ProgressiveBlur blurBlockHeight="150px" /> */}
       <ParallaxImageBackground src={BGHeroSrc} offset={imageOffset} height={imageHeight} />
       <div

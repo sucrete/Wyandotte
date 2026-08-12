@@ -12,7 +12,7 @@ import Map from '../shared/Map';
 const contactInfoItems = [
   {
     id: 1,
-    src: '/images/icons/map-green.svg',
+    src: '/images/icons/map.svg',
     imageSize: { w: 15, h: 15 },
     title: 'Our Address',
     content: '10301 S 600 Rd., Miami, OK 74354',
@@ -20,7 +20,7 @@ const contactInfoItems = [
   },
   {
     id: 2,
-    src: '/images/icons/email-2-green.svg',
+    src: '/images/icons/email.svg',
     imageSize: { w: 15, h: 15 },
     title: 'Email Us',
     content: 'info@wyandottegolfcourse.com',
@@ -28,7 +28,7 @@ const contactInfoItems = [
   },
   {
     id: 3,
-    src: '/images/icons/lineal-phone-green.svg',
+    src: '/images/icons/lineal-phone.svg',
     imageSize: { w: 15, h: 15 },
     title: 'Call Us',
     content: '(918) 542-7676',
@@ -58,8 +58,8 @@ const ContactInfo = () => {
               {contactInfoItems.map((item) => (
                 <RevealAnimation key={item.id} delay={0.4}>
                   <div className="bg-accent rounded-[20px] p-11 space-y-6 w-full md:max-w-[371px] text-center relative overflow-hidden">
-                    <figure className="size-11 mx-auto">
-                      <div className="icon-wrapper rounded-[8px] bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#f8feda,#e8edca)] p-3 shadow-sm">
+                    <figure className="size-12 mx-auto">
+                      <div className="icon-wrapper rounded-[8px] bg-taxi-cab p-3 shadow-sm">
                         <Image
                           src={item.src}
                           alt=""

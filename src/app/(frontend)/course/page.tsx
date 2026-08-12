@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Course Layout | A preview of each hole at Wyandotte Golf Course.',
+  title: 'Course Layout | A preview of each hole at Fire Ridge Golf Course.',
 };
 
 const Course = () => {

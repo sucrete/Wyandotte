@@ -43,21 +43,21 @@ const Hero = async () => {
 
   return (
     // saved classNames -> h-[99svh] xl:max-h-[90svh]
-    <section className="bg-cover bg-[url('/images/peoria-ridge/Peoria-photog.jpg')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
+    <section className="bg-cover bg-[url('/images/peoria-ridge/Peoria-photog.webp')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
       <ParallaxImageBackground
-        src="/images/peoria-ridge/Peoria-photog.jpg"
+        src="/images/peoria-ridge/Peoria-photog.webp"
         offset="-20%"
         sizes="(max-width: 768px) 200vw, 100vw"
       />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker"></div>
 
       <div className="facebook-link absolute left-6 md:left-[6.25rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
-        <RevealAnimation delay={0.8} direction="left" offset={5}>
+        <RevealAnimation delay={0.3} direction="left" offset={5} instant>
           <a
             href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Peoria Ridge Golf Course on Facebook (opens in new tab)"
+            aria-label="Fire Ridge Golf Course on Facebook (opens in new tab)"
             className="block group w-[42px] h-[42px] hover:w-[124px] transition-[width] duration-[250ms] ease-in-out overflow-hidden rounded-full backdrop-blur-xl bg-white/10 border border-[#ffffff30] shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_10px_rgba(236,236,236,0.18)]">
             <img
               src="/images/icons/f.svg"

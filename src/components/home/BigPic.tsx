@@ -18,7 +18,7 @@ const BigPic = ({src, info}: BigPicProps ) => {
         <div className="absolute bottom-5 left-5 md:bottom-[50px] md:left-[50px]">
           <div className=" text-[#ffffffa5] monospaced flex">
             <RevealAnimation delay={0.3} offset={7}>
-              <span className="green-circle size-[9px] bg-ns-green rounded-full inline-block mr-2 -mb-[1px]"></span>
+              <span className="green-circle size-[9px] bg-taxi-cab rounded-full inline-block mr-2 -mb-[1px]"></span>
             </RevealAnimation>
             <RevealAnimation delay={.35} offset={7}>
               <span className='inline-block'>views from the greens</span>

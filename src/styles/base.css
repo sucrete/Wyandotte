@@ -14,7 +14,7 @@ Font base styles
   h4,
   h5,
   h6 {
-    @apply font-body text-bushwood-700 ;
+    @apply font-body text-fr-primary-800 ;
     --fv-wght: 600;
     font-weight: 650;
     font-variation-settings: 'INKT' 0, 'wght' calc(var(--fv-wght) + var(--fv-wght-adjust, 0)), 'wdth' 100,
