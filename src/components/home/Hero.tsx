@@ -12,32 +12,7 @@ const Hero = async () => {
   const label = data ? getWeatherLabel(data.current.weather_code, data.current.wind_speed_10m) : '';
   const HeadingContent = () => (
     <>
-      Your{' '}
-      <span className="relative inline-block">
-        {/* Sibling of the gradient-text span below, not a descendant of it — a
-            descendant's z-index can never paint behind its ancestor's own
-            background, and background-clip:text renders the gradient glyphs
-            as part of that ancestor's background layer. Siblings stack by
-            z-index normally, so this is what actually lets it sit behind. */}
-        <span
-          aria-hidden="true"
-          // className="absolute -z-10 -left-[50%] translate-x-1/2 top-11 w-[200px] h-[30px] bg-[url('/images/shared/svgs/brush-1.svg')] bg-contain bg-no-repeat"
-        />
-        <span
-          className="relative z-10"
-          style={{
-            // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
-            // backgroundClip: 'text',
-            // WebkitBackgroundClip: 'text',
-            // WebkitTextFillColor: 'transparent',
-            // WebkitBoxDecorationBreak: 'clone',
-            // boxDecorationBreak: 'clone',
-          }}>
-          getaway
-        </span>
-      </span>{' '}
-      from the
-      <br /> day-to-day.
+      Welcome to Fire Ridge<br/> Golf Course!
     </>
   );
 
