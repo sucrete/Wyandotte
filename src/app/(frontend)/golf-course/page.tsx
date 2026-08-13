@@ -1,5 +1,5 @@
 import HalfHero from '@/components/ui/HalfHero';
-import HistorySection from '@/components/history/History';
+import GolfCourseSection from '@/components/golf-course/GolfCourse';
 import Footer from '@/components/shared/footer/Footer';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -8,10 +8,10 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'History | Fire Ridge Golf Course',
+  title: 'Golf Course | Fire Ridge Golf Course',
 };
 
-const History = () => {
+const GolfCourse = () => {
   return (
     <Fragment>
       <main>
@@ -20,13 +20,13 @@ const History = () => {
           imageOffset="-27%"
           imageHeight="170%"
           overlayOpacity=".35"
-          // heroText="History"
+          // heroText="Golf Course"
         />
-        <HistorySection />
+        <GolfCourseSection />
       </main>
       <Footer />
     </Fragment>
   );
 };
 
-export default History;
+export default GolfCourse;

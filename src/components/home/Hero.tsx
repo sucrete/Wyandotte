@@ -26,7 +26,7 @@ const Hero = async () => {
       />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker"></div>
 
-      <div className="facebook-link absolute left-6 md:left-[6.25rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
+      <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.3} direction="left" offset={5} instant>
           <a
             href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
@@ -50,7 +50,7 @@ const Hero = async () => {
         </RevealAnimation>
       </div>
 
-      <div className="temperature-pane hidden md:block absolute md:right-[6.25rem] md:bottom-[3rem]">
+      <div className="temperature-pane hidden md:block absolute md:right-[13rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
         <TemperaturePaneCard currentTemp={currentTemp} label={label} />
       </div>
@@ -61,7 +61,7 @@ const Hero = async () => {
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
               <h1
-                className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] area-light relative text-[#fff]"
+                className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] relative text-[#fff]"
                 style={{
                   // background: '#ffffff',
                   // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',

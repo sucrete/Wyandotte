@@ -1,5 +1,6 @@
 import HalfHero from '@/components/ui/HalfHero';
 import MembershipsSection from '@/components/memberships/MembershipsSection';
+import MembershipInquiryForm from '@/components/memberships/MembershipInquiryForm';
 import Footer from '@/components/shared/footer/Footer';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -28,6 +29,9 @@ const Memberships = async () => {
           heroText="Memberships"
         />
         <MembershipsSection membershipsData={membershipsData} />
+        <section className="py-[6rem] md:py-[9rem] lg:py-[12rem] px-5 bg-[#ffffff] border-t border-[#f2f2f2] grey-to-white-grad">
+          <MembershipInquiryForm />
+        </section>
       </main>
       <Footer />
     </Fragment>

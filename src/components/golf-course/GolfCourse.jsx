@@ -1,7 +1,7 @@
 import RevealAnimation from '../animation/RevealAnimation';
 import Image from 'next/image';
 
-const History = () => {
+const GolfCourse = () => {
   return (
     <section className=" pb-[9rem] md:pb-[9rem] lg:pb-[14rem] z-21 relative">
       <div className="main-container flex justify-center relative w-full h-full">
@@ -13,7 +13,7 @@ const History = () => {
         </div>
         <div className="copy w-[650px] max-w-full pt-[5rem] md:pt-[7rem] lg:pt-[9rem] -mt-[10rem] relative z-20">
           <RevealAnimation delay={0.1}>
-            <h2 className="pb-5">The History of <br/>Fire Ridge</h2>
+            <h2 className="pb-5 text-4xl">The Fire Ridge<br/>Golf Course</h2>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <Image src={'/images/shared/three-marbles.svg'} className="pb-5" width={30} height={10} alt=""></Image>
@@ -48,4 +48,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default GolfCourse;

@@ -1,6 +1,42 @@
 /* =========================
 Font base styles
 =========================== */
+
+/* Small-cap heading fonts under evaluation for h1/h2/h3 — swap the classname
+   used below in @layer base to try each one. Not decided yet, so all three
+   stay declared here rather than committing to one. */
+@font-face {
+  font-family: 'CormorantSC-Regular';
+  src: url('/fonts/CormorantSC-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'CormorantSC-Medium';
+  src: url('/fonts/CormorantSC-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'TrajanPro-Regular';
+  src: url('/fonts/TrajanPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@utility comorant {
+  font-family: 'CormorantSC-Regular', serif;
+}
+@utility comorant-med {
+  font-family: 'CormorantSC-Medium', serif;
+}
+@utility trajan {
+  font-family: 'TrajanPro-Regular', serif;
+}
+
 @layer base {
   /* Default heading face: area-variable at weight 600.
      font-variation-settings is set explicitly because the 'wght' axis overrides
@@ -14,16 +50,17 @@ Font base styles
   h4,
   h5,
   h6 {
-    @apply font-body text-fr-primary-800 ;
-    --fv-wght: 600;
+    /* font-body (this was in the line below) */
+    @apply  text-fr-primary-800;
+    /* --fv-wght: 600;
     font-weight: 650;
     font-variation-settings: 'INKT' 0, 'wght' calc(var(--fv-wght) + var(--fv-wght-adjust, 0)), 'wdth' 100,
-      'slnt' var(--fv-slnt, 0);
+      'slnt' var(--fv-slnt, 0); */
   }
   h1,
   h2,
   h3 {
-    @apply tracking-[-1px] leading-[1];
+    @apply tracking-[-1px] leading-[1] trajan;
   }
 
   h1 {

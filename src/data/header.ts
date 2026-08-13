@@ -155,12 +155,12 @@ export const pagesMegaMenuColumns: MegaMenuColumn[] = [
 
 //* Split menu
 export const splitMenuLeft: NavigationItem[] = [
-  {
-    id: 'greens-fees',
-    label: 'Green Fees',
-    href: '/greens-fees',
-    hasDropdown: false,
-  },
+  // {
+  //   id: 'greens-fees',
+  //   label: 'Greens Fees',
+  //   href: '/greens-fees',
+  //   hasDropdown: false,
+  // },
   {
     id: 'memberships',
     label: 'Memberships',
@@ -189,9 +189,9 @@ export const splitMenuRight: NavigationItem[] = [
     hasDropdown: false,
   },
   {
-    id: 'history',
-    label: 'History',
-    href: '/history',
+    id: 'golf-course',
+    label: 'Golf Course',
+    href: '/golf-course',
     hasDropdown: false,
   },
   {

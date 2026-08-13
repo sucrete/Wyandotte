@@ -2,8 +2,7 @@ import HalfHero from '@/components/ui/HalfHero';
 import NewsletterSignup from '@/components/shared/NewsletterSignup';
 import Footer from '@/components/shared/footer/Footer';
 import ContactInfo from '@/components/contact/ContactInfo';
-import ContactMap from '@/components/contact/ContactMap';
-import WhereToFindUs from '@/components/contact/WhereToFindUs';
+import ContactForm from '@/components/contact/ContactForm';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -26,9 +25,11 @@ const Contact = () => {
           heroText="Contact Us"
         />
         <ContactInfo />
-        {/* <WhereToFindUs/> */}
+        <section className="pt-[3rem] pb-[6rem] md:pb-[9rem] lg:pb-[12rem] px-5">
+          <ContactForm />
+        </section>
         {/* <NewsletterSignup
-          className="bg-background-2" 
+          className="bg-background-2"
           inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent"
         /> */}
       </main>

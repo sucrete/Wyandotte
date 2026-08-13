@@ -77,11 +77,11 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 <div className="space-y-5 flex flex-col items-center md:items-start">
                   <p className=" text-tagline-1 text-accent/60 ">Pages</p>
                   <ul className="space-y-0 sm:space-y-1 text-center md:text-left">
-                    <li>
+                    {/* <li>
                       <Link href="/greens-fees" className="footer-link">
-                        Green Fees
+                        Greens Fees
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/memberships" className="footer-link">
                         Memberships
@@ -103,8 +103,8 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/history" className="footer-link">
-                        History
+                      <Link href="/golf-course" className="footer-link">
+                        Golf Course
                       </Link>
                     </li>
                     <li>

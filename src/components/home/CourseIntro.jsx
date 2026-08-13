@@ -51,9 +51,9 @@ const CourseIntro = () => {
             </div>
             <RevealAnimation delay={0.2} direction="left" offset={20}>
               <h2
-                className="leading-[1.1] text-[3rem] text-bushwood-
+                className="leading-[1.1] text-[2.5rem] text-bushwood-
               700">
-                A rewarding experience from tee one.
+                A Rewarding Experience From Tee One
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3} direction="left" offset={20}>

@@ -20,7 +20,7 @@
 }
 .bushwood-logo-is-scrolled {
   path {
-    @apply fill-black ;
+    @apply fill-black;
   }
 }
 @utility monospaced {
@@ -191,6 +191,28 @@ table {
     hsla(0, 0%, 0%, 0.244) 73.6%,
     hsla(0, 0%, 0%, 0.241) 86%,
     hsla(0, 0%, 0%, 0.24) 100%
+  );
+}
+
+@utility grey-to-white-grad {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(0, 0%, 98%) 0%,
+    hsl(0, 0%, 98.03%) 9.7%,
+    hsl(0, 0%, 98.1%) 17.8%,
+    hsl(0, 0%, 98.21%) 24.6%,
+    hsl(0, 0%, 98.35%) 30.3%,
+    hsl(0, 0%, 98.52%) 35.3%,
+    hsl(0, 0%, 98.71%) 39.7%,
+    hsl(0, 0%, 98.91%) 43.8%,
+    hsl(0, 0%, 99.1%) 48%,
+    hsl(0, 0%, 99.3%) 52.4%,
+    hsl(0, 0%, 99.49%) 57.4%,
+    hsl(0, 0%, 99.65%) 63.2%,
+    hsl(0, 0%, 99.79%) 70.1%,
+    hsl(0, 0%, 99.9%) 78.4%,
+    hsl(0, 0%, 99.97%) 88.2%,
+    hsl(0, 0%, 100%) 100%
   );
 }
 
@@ -538,11 +560,11 @@ Common Styles all over the sites
 
 /* ==========FOOTER========== */
 .footer-link {
-  @apply text-tagline-1 max-[426px]:text-tagline-2 text-primary-50 relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100 ;
+  @apply text-tagline-1 max-[426px]:text-tagline-2 text-primary-50 relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100;
 }
 
 .footer-link-v2 {
-  @apply text-tagline-1 text-secondary max-[426px]:text-tagline-2 before:bg-secondary relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100 ;
+  @apply text-tagline-1 text-secondary max-[426px]:text-tagline-2 before:bg-secondary relative inline-block overflow-hidden before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-right before:scale-x-0 before:transition-transform before:duration-500 before:content-[''] hover:before:origin-left hover:before:scale-x-100;
 }
 
 .footer-social-link {
@@ -836,7 +858,7 @@ Common Styles all over the sites
 
 .table-of-contents .table-of-list li:hover span:first-child,
 .table-of-contents .table-of-list li:hover a span {
-  @apply text-secondary ;
+  @apply text-secondary;
 }
 
 .table-of-contents .table-of-list li span:last-child {
@@ -935,7 +957,6 @@ Common Styles all over the sites
   }
 }
 
-
 /* career details body */
 .career-details-body {
   @apply space-y-[70px];
@@ -981,7 +1002,7 @@ Common Styles all over the sites
   ul {
     @apply ps-5 space-y-2 marker:text-secondary list-disc;
     li {
-      @apply text-secondary/60 ;
+      @apply text-secondary/60;
     }
   }
 }

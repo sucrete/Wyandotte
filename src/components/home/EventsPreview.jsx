@@ -80,7 +80,7 @@ const EventsPreview = () => {
                 <Image className="size-[60px] -ml-3" src="/images/home/golf-ball.png" width={300} height={300} alt="" />
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="leading-[1.1] text-[2.5rem] text-fr-primary-800 pb-4 -ml-1">
+                <h2 className="leading-[1.1] text-[2rem] text-fr-primary-800 pb-4 -ml-1">
                   Upcoming <br />
                   Events
                 </h2>

@@ -25,6 +25,7 @@ interface NavbarFourProps {
 const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = false, forceDark = false }: NavbarFourProps) => {
   const { isScrolled } = useNavbarScroll(100);
   const dark = isScrolled || forceDark;
+  const navItems = [...splitMenuLeft, ...splitMenuRight];
   return (
     <MobileMenuProvider>
       <NoticeTicker isScrolled={isScrolled} notices={notices} visible={tickerVisible} />
@@ -38,25 +39,12 @@ const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = fal
               : 'translate-y-3 md:translate-y-0',
           className,
         )}>
-        <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between relative">
-          <div className="flex items-center gap-[76px]">
-            <nav className="hidden items-center xl:flex">
-              <ul className="flex items-center gap-6">
-                {splitMenuLeft.map((item) => {
-                  return (
-                    <li key={item?.id} className={cn('py-6', item?.hasDropdown && 'group/nav relative cursor-pointer')}>
-                      <NavItemLink variant={dark ? 'border' : 'white'} item={item} />
-                    </li>
-                  );
-                })}
-              </ul>
-            </nav>
-          </div>
+        <div className="mx-auto flex w-full max-w-[1470px] px-6 lg:px-16 items-center justify-end relative">
           <LogoBox isScrolled={isScrolled} />
           <div className="flex items-center gap-[30px]">
             <nav className="hidden items-center xl:flex">
               <ul className="flex items-center gap-6">
-                {splitMenuRight.map((item) => {
+                {navItems.map((item) => {
                   return (
                     <li key={item?.id} className={cn('py-6', item?.hasDropdown && 'group/nav relative cursor-pointer')}>
                       <NavItemLink variant={dark ? 'border' : 'white'} item={item} />

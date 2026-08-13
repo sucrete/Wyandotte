@@ -29,7 +29,7 @@ const HalfHero = ({
         style={{ opacity: overlayOpacity }}></div>
       <div className="absolute w-full bottom-5 z-5 px-2 lg:px-20 xl:px-25">
         <RevealAnimation delay={0.1}>
-          <div className="h1-wrapper flex w-full max-w-[1920px] mx-auto">
+          <div className="h1-wrapper flex w-full max-w-[1415px] px-6 lg:px-16 mx-auto">
             <div className="prophylactic">
               {heroText && <h1 className="text-[#ffffff] text-[2rem] sm:text-[3rem]">{heroText}</h1>}
             </div>

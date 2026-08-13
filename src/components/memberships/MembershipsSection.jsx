@@ -52,12 +52,12 @@ const MembershipsSection = ({ membershipsData }) => {
                 key={prefix}
                 delay={0.1 + index * 0.05}
                 className="shrink-0 min-w-0 basis-[calc(33.333%_-_1rem)]">
-                <div className="group relative rounded-[20px] overflow-hidden bg-white h-full flex flex-col text-center shadow-[0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
+                <div className="group relative rounded-[20px] overflow-hidden bg-white h-full flex flex-col text-center shadow-[0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
                   {/* Inset ring lives on its own overlay (not on .group) since a parent's own
                       box-shadow always paints beneath its children, regardless of z-index —
                       this z-10 overlay is what actually keeps it visible above the image. Kept
                       separate from the hover-gradient overlay below so it isn't tied to hover opacity. */}
-                  <div className="pointer-events-none absolute inset-0 z-10 rounded-[20px] shadow-[inset_0_0_0_1px_oklab(0.93_0_0/0.35)]" />
+                  {/* <div className="pointer-events-none absolute inset-0 z-10 rounded-[20px] shadow-[inset_0_0_0_1px_oklab(0.93_0_0/0.35)]" /> */}
                   {/* Gradient only visible on hover — cue taken from HeroUI's card component */}
                   <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-fr-primary-800/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
