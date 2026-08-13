@@ -7,7 +7,7 @@ import { useFormSubmit } from '@/utils/useFormSubmit';
 import { validateEmail, validatePhone, validateRequired } from '@/utils/formValidation';
 
 const CARD_CLASS =
-  'max-w-[800px] mx-auto rounded-[20px] border border-[#80808021] bg-white shadow-[0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]';
+  'max-w-[800px] mx-auto rounded-[20px] bg-white';
 
 const ContactForm = () => {
   const [fields, setFields] = useState({ name: '', email: '', phone: '', message: '' });

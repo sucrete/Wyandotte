@@ -88,11 +88,6 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/course" className="footer-link">
-                        Course
-                      </Link>
-                    </li>
-                    <li>
                       <Link href="/events" className="footer-link">
                         Events
                       </Link>

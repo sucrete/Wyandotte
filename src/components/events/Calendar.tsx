@@ -122,7 +122,7 @@ const CalendarComponent = ({ eventsData }: { eventsData: SanityEvent[] }) => {
   });
 
   return (
-    <section className="pt-[7rem] pb-[7rem] md:py-[7rem] bg-[#f3f2f1]">
+    <section className="pt-[7rem] pb-[7rem] md:pt-[7rem] md:pb-[12rem] bg-[#f3f2f1]">
       <div className="main-container mx-auto px-4 mt-3 lg:mt-10">
         {/* Modal Reproduction with Tailwind */}
         {selectedEvent && (

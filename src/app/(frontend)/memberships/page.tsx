@@ -2,6 +2,7 @@ import HalfHero from '@/components/ui/HalfHero';
 import MembershipsSection from '@/components/memberships/MembershipsSection';
 import MembershipInquiryForm from '@/components/memberships/MembershipInquiryForm';
 import Footer from '@/components/shared/footer/Footer';
+import Separator from '@/components/shared/Separator';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -20,7 +21,7 @@ const Memberships = async () => {
 
   return (
     <Fragment>
-      <main>
+      <main className="bg-[#f3f3f3]">
         <HalfHero
           BGHeroSrc="/images/peoria-ridge/banner-2.jpg"
           imageOffset="-7%"
@@ -29,7 +30,8 @@ const Memberships = async () => {
           heroText="Memberships"
         />
         <MembershipsSection membershipsData={membershipsData} />
-        <section className="py-[6rem] md:py-[9rem] lg:py-[12rem] px-5 bg-[#ffffff] border-t border-[#f2f2f2] grey-to-white-grad">
+        <Separator />
+        <section className="pb-[6rem] md:pb-[9rem] lg:pb-[12rem] pt-[1rem] md:pt-[3rem] lg:pt-[8rem] px-5">
           <MembershipInquiryForm />
         </section>
       </main>

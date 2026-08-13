@@ -21,7 +21,7 @@ const CARD_CLASS =
   'max-w-[800px] mx-auto rounded-[20px] bg-white shadow-[0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]';
 
 const CARD_CLASS_FORM =
-  'main-container mx-auto rounded-[20px] bg-white shadow-[0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]';
+  'main-container mx-auto rounded-[20px] bg-white';
 
 //  shadow-[0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]
 
@@ -67,11 +67,11 @@ const MembershipInquiryForm = () => {
 
   return (
     <RevealAnimation delay={0.1}>
-      <form onSubmit={handleSubmit} noValidate className={`${CARD_CLASS_FORM} p-6 md:p-10 space-y-5 w-full`}>
+      <form id='membership-form' onSubmit={handleSubmit} noValidate className={`${CARD_CLASS_FORM} p-6 md:p-4 space-y-5 w-full scroll-mt-[7rem]`}>
         <div className="grid grid-cols-6 gap-16">
-          <div className="col-span-5 md:col-span-4 this-column flex flex-col justify-center">
+          <div className="col-span-6 md:col-span-4 flex flex-col justify-center p-0 md:p-6">
             <div className="pb-8">
-              <h3 className="text-heading-5 md:text-[2.5rem] text-fr-primary-800 pb-2">Interested in a Membership?</h3>
+              <h3 className="text-heading-5 md:text-[2.5rem] text-fr-primary-800 pb-2 -ml-0.5">Interested in a Membership?</h3>
               <p className="text-primary/70">Fill out the form below and we&apos;ll follow up with details.</p>
             </div>
 
@@ -153,7 +153,7 @@ const MembershipInquiryForm = () => {
             </div>
           </div>
           <div className="col-span-2 hidden md:block">
-            <Image src={golferInRed} width={600} height={800} alt="" />
+            <Image className='rounded-xl' src={golferInRed} width={600} height={800} alt="" />
           </div>
         </div>
       </form>

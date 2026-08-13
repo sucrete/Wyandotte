@@ -25,7 +25,7 @@ const Contact = () => {
           heroText="Contact Us"
         />
         <ContactInfo />
-        <section className="pt-[3rem] pb-[6rem] md:pb-[9rem] lg:pb-[12rem] px-5">
+        <section className="pt-[3rem] pb-[6rem] md:pb-[9rem] lg:pb-[12rem] px-5 bg-background-4">
           <ContactForm />
         </section>
         {/* <NewsletterSignup
