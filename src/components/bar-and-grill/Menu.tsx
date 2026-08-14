@@ -29,7 +29,7 @@ const Menu = () => {
           <RevealAnimation delay={0.1} offset={10}>
             <h2 className="pb-6 text-4xl text-center">Bar & Grill Menu</h2>
           </RevealAnimation>
-          <div className="intro-wrapper mx-auto max-w-full flex flex-col gap-5 pb-[4rem]">
+          <div className="intro-wrapper mx-auto max-w-full flex flex-col gap-5 pb-[3rem]">
             <RevealAnimation delay={0.2} offset={10}>
               <div className="main-container flex flex-row gap-3 items-center ">
                 <div className="flex-auto">
@@ -54,34 +54,67 @@ const Menu = () => {
             </RevealAnimation>
           </div>
 
-          <div className="document space-y-5 text-primary/70">
-            <div className="category-wrapper grid grid-cols-7 gap-8">
-              <div className="col-span-4">
-                <div className="h-full flex flex-col justify-center">
-                  <h3 className="-ml-1 pb-1">Entrées</h3>
-                  <p className="text-[12px] pb-2.5 text-[#696969]">Includes side of fries.</p>
-                  <ul className="columns-2 text-[12px] space-y-2">
-                    <li>BLT Sandwich</li>
-                    <li>Ham Sandwich</li>
-                    <li>Club Sandwich</li>
-                    <li>Bacon Cheeseburger</li>
-                    <li>Chicken Strip Basket</li>
-                    <li>Turkey Sandwich</li>
-                    <li>Chicken Sandwich</li>
-                    <li>Patty Melt</li>
-                  </ul>
+          <div className="document space-y-15 text-primary/70">
+            <RevealAnimation delay={0.5}>
+              <div className="category-wrapper grid grid-cols-7 gap-10">
+                <div className="col-span-4 pl-5">
+                  <div className="h-full flex flex-col justify-center">
+                    <h3 className="-ml-1 pb-1">Entrées</h3>
+                    <p className="text-[12px] pb-2.5 text-[#696969]">Includes side of fries.</p>
+                    <ul className="columns-2 text-[12px] space-y-2 list-[square] ps-3.5 marker:text-fr-primary-800/15">
+                      <li>BLT Sandwich</li>
+                      <li>Ham Sandwich</li>
+                      <li>Club Sandwich</li>
+                      <li>Bacon Cheeseburger</li>
+                      <li>Chicken Strip Basket</li>
+                      <li>Turkey Sandwich</li>
+                      <li>Chicken Sandwich</li>
+                      <li>Patty Melt</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-span-3">
+                  <Image
+                    className="w-full h-auto"
+                    src="/images/peoria-ridge/food/patty-melt.webp"
+                    width={700}
+                    height={300}
+                    alt=""
+                  />
                 </div>
               </div>
-              <div className="col-span-3">
-                <Image
-                  className="w-full h-auto"
-                  src="/images/peoria-ridge/food/patty-melt.webp"
-                  width={700}
-                  height={300}
-                  alt=""
-                />
+            </RevealAnimation>
+            <RevealAnimation offset={10}>
+              <Divider />
+            </RevealAnimation>
+            <RevealAnimation delay={0.1}>
+              <div className="category-wrapper grid grid-cols-7 gap-10">
+                <div className="col-span-3">
+                  <Image
+                    className="w-full h-auto"
+                    src="/images/peoria-ridge/food/Cheese-Sticks.webp"
+                    width={700}
+                    height={300}
+                    alt=""
+                  />
+                </div>
+                <div className="col-span-4">
+                  <div className="h-full flex flex-col justify-center">
+                    <h3 className="-ml-1 pb-3">Quick Bites</h3>
+                    {/* <p className="text-[12px] pb-2.5 text-[#696969]">Includes side of fries.</p> */}
+                    <ul className="columns-2 text-[12px] space-y-2 list-[square] ps-3.5 marker:text-fr-primary-800/15">
+                      <li>Bowl of Chili</li>
+                      <li>Seasoned Fries or Tots</li>
+                      <li>Habanero Cheese Curds</li>
+                      <li>Mozzarella Sticks</li>
+                      <li>Hot Dog</li>
+                      <li>Fried Mushrooms</li>
+                      <li>Chili Dog</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-            </div>
+            </RevealAnimation>
           </div>
         </div>
       </div>
