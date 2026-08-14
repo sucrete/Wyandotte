@@ -1,4 +1,5 @@
 import HalfHero from '@/components/ui/HalfHero';
+import Menu from '@/components/bar-and-grill/Menu';
 import Footer from '@/components/shared/footer/Footer';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -15,13 +16,13 @@ const BarAndGrill = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/feeling-this-fairway.jpg"
-          imageOffset="-27%"
-          imageHeight="170%"
+          BGHeroSrc="/images/peoria-ridge/banquet-room.jpg"
+          imageOffset="-7%"
+          imageHeight="110%"
           overlayOpacity=".35"
-          heroText="Bar & Grill"
+          // heroText="Bar & Grill"
         />
-        {/* Page body TBD */}
+        <Menu/>
       </main>
       <Footer />
     </Fragment>

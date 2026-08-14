@@ -70,7 +70,7 @@ Font base styles
     @apply text-[1.75rem] sm:text-heading-4 md:text-heading-3 xl:text-heading-2;
   }
   h3 {
-    @apply text-heading-5 md:text-heading-4 xl:text-heading-3;
+    @apply text-heading-5 md:text-[1.5rem] xl:text-[2rem];
   }
   h4 {
     @apply text-heading-4; 

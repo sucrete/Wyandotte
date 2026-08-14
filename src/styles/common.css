@@ -1050,3 +1050,28 @@ Common Styles all over the sites
 .accordion-home-38 svg[data-state='closed'] path {
   @apply !stroke-secondary;
 }
+
+/* =========================
+Gallery lightbox (Radix Dialog) backdrop fade. Plain @keyframes rather than a
+Tailwind transition, since a transition needs an actual value change across
+two renders to animate and Radix mounts Overlay already at its final
+data-state on open; a keyframe animation plays from its `from` state
+regardless of mount timing. (The image itself fades in via RevealAnimation's
+own GSAP tween, not CSS.)
+=========================== */
+@keyframes lightbox-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lightbox-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

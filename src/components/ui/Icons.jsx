@@ -34,6 +34,13 @@ export const Arrow = ({ className = '' }) => {
     </svg>
   );
 };
+export const Expand = ({ className = '' }) => {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512">
+      <path d="M3,3 H9 V5 H5 V9 H3 Z M21,3 H15 V5 H19 V9 H21 Z M3,21 H9 V19 H5 V15 H3 Z M21,21 H15 V19 H19 V15 H21 Z" />
+    </svg>
+  );
+};
 export const SmallArrow = ({ className = '' }) => {
   return (
     <svg

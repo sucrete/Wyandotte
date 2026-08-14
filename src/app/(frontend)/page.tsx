@@ -3,7 +3,7 @@ import Hero from '@/components/home/Hero';
 import Links from '@/components/home/Links';
 import CourseIntro from '@/components/home/CourseIntro';
 import EventsPreview from '@/components/home/EventsPreview';
-import BigPic from '@/components/home/BigPic';
+import Gallery from '@/components/home/Gallery';
 import NewsletterSignup from '@/components/shared/NewsletterSignup';
 
 import Footer from '@/components/shared/footer/Footer';
@@ -25,8 +25,8 @@ const Home = async () => {
         <Links />
         <CourseIntro />
         <EventsPreview />
-        <BigPic src="/images/hero-images/hidden-2.jpg" info="The Green at Hole 6" />
-       
+        <Gallery />
+
         {/* <NewsletterSignup inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent" /> */}
       </main>
       <Footer />
