@@ -13,7 +13,8 @@ const Hero = async () => {
   const label = data ? getWeatherLabel(data.current.weather_code, data.current.wind_speed_10m) : '';
   const HeadingContent = () => (
     <>
-      Welcome to Fire Ridge<br/> Golf Course!
+      Welcome to Fire Ridge
+      <br /> Golf Course!
     </>
   );
 
@@ -25,7 +26,7 @@ const Hero = async () => {
         offset="-8%"
         sizes="(max-width: 768px) 200vw, 100vw"
       />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-60"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30 md:opacity-50"></div>
 
       <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.3} direction="left" offset={5} instant>
@@ -56,45 +57,49 @@ const Hero = async () => {
         <TemperaturePaneCard currentTemp={currentTemp} label={label} />
       </div>
       <div className="main-container center-it top-[54%] min-w-[90vw] md:min-w-[1290px]">
-        <div className="text-center md:space-y-4 space-y-5">
+        <div className="text-center md:space-y-4 space-y-1">
           <RevealAnimation delay={0.1}>
             {/* 1. Relative Container for the "Stack" */}
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
               <h1
                 className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] relative text-[#fff]"
-                style={{
-                  // background: '#ffffff',
-                  // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
-                  // // textShadow: '0 0 45px white',
-                  // backgroundClip: 'text',
-                  // WebkitBackgroundClip: 'text',
-                  // WebkitTextFillColor: 'transparent',
-                  // WebkitBoxDecorationBreak: 'clone',
-                  // boxDecorationBreak: 'clone',
-                }}>
+                style={
+                  {
+                    // background: '#ffffff',
+                    // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
+                    // // textShadow: '0 0 45px white',
+                    // backgroundClip: 'text',
+                    // WebkitBackgroundClip: 'text',
+                    // WebkitTextFillColor: 'transparent',
+                    // WebkitBoxDecorationBreak: 'clone',
+                    // boxDecorationBreak: 'clone',
+                  }
+                }>
                 <HeadingContent />
               </h1>
             </div>
           </RevealAnimation>
-           <RevealAnimation delay={0.2} offset={10}>
-              <div className="flex flex-row gap-3 items-center max-w-[80vw] md:max-w-[476px] mx-auto">
-                <div className="flex-auto">
-                  <div className="border-t border-[#ffffff49] h-[1px] "></div>
-                </div>
-                <div className="div">
-                  <FireIcon className="fill-[#ffffff97] size-[15px]" />
-                </div>
-                <div className="flex-auto">
-                  <div className="border-t border-[#ffffff49] h-[1px] "></div>
-                </div>
+          <RevealAnimation delay={0.2} offset={10}>
+            <div className="flex flex-row gap-3 items-center max-w-[60vw] md:max-w-[476px] mx-auto">
+              <div className="flex-auto">
+                <div className="border-t border-[#ffffff49] h-[1px] "></div>
               </div>
-            </RevealAnimation>
+              <div className="div">
+                <FireIcon className="fill-[#ffffff97] size-[13px] md:size-[15px]" />
+              </div>
+              <div className="flex-auto">
+                <div className="border-t border-[#ffffff49] h-[1px] "></div>
+              </div>
+            </div>
+          </RevealAnimation>
           <RevealAnimation delay={0.2}>
-            <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[14px]">
-              Step onto our pristine courses and feel instantly immersed in the lush surroundings. With rolling terrain,
-              natural obstacles, and sparkling water features, every visit offers a round of memorable and engaging
-              golf.
+            <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[12px] md:text-[14px]">
+              Step onto our pristine courses and feel instantly immersed in the lush surroundings.{' '}
+              <span className="max-md:hidden">
+                With rolling terrain, natural obstacles, and sparkling water features, every visit offers a round of
+                memorable and engaging golf.
+              </span>
             </p>
           </RevealAnimation>
         </div>

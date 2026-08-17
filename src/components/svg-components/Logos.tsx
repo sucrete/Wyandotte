@@ -7,6 +7,7 @@ interface LogoProps {
 interface ToggleLogoProps {
   className?: string;
   transparent?: boolean;
+  isMobile?: boolean;
 }
 
 export const Logo = ({ className = '', markClassName = 'fill-[#297AFF]' }: LogoProps) => {
@@ -40,7 +41,7 @@ export const Logo = ({ className = '', markClassName = 'fill-[#297AFF]' }: LogoP
   );
 };
 
-export const FireRidgeLogoFull = ({ className = '', transparent = false }: ToggleLogoProps) => {
+export const FireRidgeLogoFull = ({ className = '', transparent = false, isMobile = false }: ToggleLogoProps) => {
   return (
     <svg
       className={cn(
@@ -48,6 +49,9 @@ export const FireRidgeLogoFull = ({ className = '', transparent = false }: Toggl
         transparent
           ? '[&_.cls-2.to-make-transparent]:fill-transparent [&_.cls-1.to-make-transparent]:fill-transparent [&_.cls-3.to-make-transparent]:fill-transparent [&_.cls-4]:fill-[#580100]'
           : '[&_.cls-1]:fill-[#7c0200] [&_.cls-2]:fill-[#fff] [&_.cls-3]:fill-[#9c3002] [&_.cls-4]:fill-[#fff]',
+        isMobile
+          ? '[&_.cls-2.to-make-transparent]:fill-transparent [&_.cls-1.to-make-transparent]:fill-transparent [&_.cls-3.to-make-transparent]:fill-transparent'
+          : '',
         className,
       )}
       xmlns="http://www.w3.org/2000/svg"
@@ -175,9 +179,14 @@ export const FireRidgeLogoFull = ({ className = '', transparent = false }: Toggl
     </svg>
   );
 };
-export const FireIcon = ({ className = 'fill-[#e9e9e9]'}: ToggleLogoProps) => {
+export const FireIcon = ({ className = 'fill-[#e9e9e9]' }: ToggleLogoProps) => {
   return (
-    <svg className={className} id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 994.34 994.34">
+    <svg
+      className={className}
+      id="Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 994.34 994.34">
       <path d="M630.66,881.67c2.13,17.17,14.87,36.68,14.9,52.99-95.1-115.15-81.36-191.68-23.54-280.18-3.08-4.75-20.38,5.02-23.85,5.93-3.96,1.04-11.09,5.52-13.83,8.73l-23.55,27.54c-7.52-5.29-11.98-11.94-15.85-19.35-12.6-24.11-22.56-47.29-25.98-74.38-14.08-53.32-3.38-120.27,20.67-170.29l-6.06-9.93c-.79-3.48-9.99-7.28-21.02,7.99l-25.2,38.79c-34.76,43.8-57.48,90.43-75.45,145.61-50.28-93.88-1.82-194.92,54.93-272.34l28.9-39.43,17.2-23.88c26.09-36.22,45.61-74.59,53.33-118.72,4.23-24.18,5.88-45.98-2.07-70.13-5.6-29.35-19.97-56.08-37.94-79.98-.07-1.07-11.47-10.96-10.44-10.63l17.66,7.17c38.19,20.31,81.53,55.5,104.95,92.64,31.9,50.58,42.14,60.65,47.46,127.13,1.15,14.42-1.73,53.66-5.63,69.72-4.03,16.6-10.38,36.07-18.03,53.17-10.36,23.16-49.81,85-49.81,85-23.59,41.25-33.44,95.98-21.36,131.02,1.15,3.33,5.6,8.84,8.38,8.76s8.89-2.6,12.11-4.49c13.81-8.13,31.98-21.09,31.98-21.09,35.34-27.6,69.42-68.46,76.62-121.98l5.9-43.89c37.44,48.15,45.35,124.83,37.87,180.55-6.13,45.64-29.61,84.3-55.66,120.54-27.73,38.59-68.33,99.5-75.92,139.45-4.67,24.54-3.65,41.99-1.67,57.97Z" />
       <path d="M474.55,732.33c21.71,91.01,49.19,123.6,113.6,191.91,11.01,11.68,29.53,21.48,42.94,30.14,20.42,13.2,32.24,21.05,59.61,39.96l-26.51-.94-84.6-2.06-29.08-3.4c-83.48-9.75-164.17-41.59-224.21-100.17-54.94-53.61-90.31-120.43-96.93-196.7-5.57-64.19,4.1-120.49,32.89-177.39,9.69-19.14,18.17-38.41,30.42-55.39,18.46-25.59,37.37-48.68,61.77-70.58,0,0-16.45,54.51-19.59,73.19-1.94,11.57-3.35,35.06-3.34,46.79,0,11.1,2.42,33.22,3.23,44.3,1.07,14.68,7.26,31.35,12.88,45.05,11.35,27.68,31.04,48.57,51,70.47-1.53,24.53-2.34,47.27,1.69,70.03,4.06,22.97,22.05,81.01,31.41,86.31,2.05,1.16,26.97,9.32,27.94,7.6.43-19.33-2.29-53.4-5.69-77.91l17.36-95.13,3.19,73.93Z" />
       <g>

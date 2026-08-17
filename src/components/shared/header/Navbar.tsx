@@ -31,7 +31,7 @@ const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = fal
       <NoticeTicker isScrolled={isScrolled} notices={notices} visible={tickerVisible} />
       <header
         className={cn(
-          'fixed left-0 top-0 z-50 flex w-full items-center pt-2 pb-2.5 px-2 lg:px-20 xl:px-25 transition-[padding,background-color,border-color,backdrop-filter,box-shadow,translate] duration-500 ease-in-out border-transparent',
+          'fixed left-0 top-0 z-50 flex w-full items-center pt-2 pb-2.5 px-1 lg:px-20 xl:px-25 transition-[padding,background-color,border-color,backdrop-filter,box-shadow,translate] duration-500 ease-in-out border-transparent',
           isScrolled
             ? 'header-scrolled translate-y-0 pt-2 pb-2 xl:pt-0 xl:pb-0 bg-white/90 backdrop-blur-[9px] border-b border-solid border-[#0000000d]'
             : tickerVisible

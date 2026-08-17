@@ -25,8 +25,8 @@ const MobileMenuButton = ({ className = '', isScrolled = false }: MMButtonProps)
         <span
           className="block w-6 transition-colors duration-300"
           // style={{ color: isScrolled ? '#070b10' : 'var(--color-accent)' }}
-          >
-          <HamburgerIcon className={cn(isScrolled ? 'text-[#070b10]': 'text-[#fff] sm:text-[#070b10]')} />
+        >
+          <HamburgerIcon className={cn(isScrolled ? 'text-fr-primary-800' : 'text-[#fff] sm:text-fr-primary-800')} />
         </span>
       </button>
     </div>

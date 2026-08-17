@@ -3,6 +3,8 @@ import { FireIcon } from '../svg-components/Logos';
 import Image from 'next/image';
 import { cn } from '@/utils/cn';
 
+import logoBadge from '@public/images/logos/logo-badge.svg';
+
 const Divider = () => {
   return (
     <div className="main-container flex flex-row items-center ">
@@ -21,6 +23,13 @@ const Menu = () => {
       <div className="main-container flex justify-center relative w-full h-full">
         <div className="overlay absolute bg-fade-to-white w-full h-[300px] z-18 left-[0rem] top-[8rem] after:content-[''] after:absolute after:left-[0rem] after:top-[300px] after:w-full after:bg-[#ffffff] after:h-[250px]"></div>
         <div className="paper absolute w-[1100px] h-[600px] max-w-full pt-[5rem] md:pt-[7rem] z-17 lg:pt-[9rem] shadow-2xl left-1/2 -translate-x-1/2 top-[-4rem] bg-[#ffffff]">
+          <Image
+            src={logoBadge}
+            className="absolute opacity-5 top-[4rem] right-[10rem] w-[200px] z-19"
+            width={700}
+            height={700}
+            alt=""
+          />
           <div className="faux-menu border-box absolute inset-0 w-full h-full p-4">
             <div className="border w-full h-full border-fr-primary-800/15"></div>
           </div>
@@ -115,7 +124,7 @@ const Menu = () => {
                 </div>
               </div>
             </RevealAnimation>
-             <RevealAnimation offset={10}>
+            <RevealAnimation offset={10}>
               <Divider />
             </RevealAnimation>
             <RevealAnimation delay={0.5}>
