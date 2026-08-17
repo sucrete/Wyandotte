@@ -117,12 +117,21 @@ const Lightbox = ({ images, index, onClose, onNavigate }: LightboxProps) => {
             }}
             className="flex h-full w-full items-center justify-center p-6 pb-24">
             {image && (
-              <RevealAnimation key={index} instant direction="down" offset={10} duration={0.3} className="relative">
+              <RevealAnimation key={index} instant direction="down" offset={10} duration={0.3}>
+                {/* Sized by the width/height attributes next/image derives from
+                    the static import, so the image lays out at its true pixel
+                    size and the max-* rules only ever shrink it. Deliberately
+                    no `w-auto`: that would discard those attributes and fall
+                    back to intrinsic sizing, which on a 2x display divides the
+                    srcset's `2x` candidate by 2 and renders everything at half
+                    size. `h-auto` keeps the aspect ratio while width leads, and
+                    object-contain guards the ratio if max-h does the clamping. */}
                 <Image
                   src={image}
                   alt={`Fire Ridge Golf Course — photo ${index !== null ? index + 1 : ''}`}
                   priority
-                  className="max-h-[70vh] w-auto max-w-[90vw] rounded-[12px] object-contain"
+                  sizes="100vw"
+                  className="h-auto max-w-[calc(100vw-3rem)] max-h-[calc(100vh-7.5rem)] object-contain rounded-sm"
                 />
               </RevealAnimation>
             )}

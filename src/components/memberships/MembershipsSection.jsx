@@ -27,14 +27,14 @@ const MembershipsSection = ({ membershipsData }) => {
   return (
     <section className="rates-section " id="memberships">
       <div className="bg-[#fff]">
-        <div className="main-container py-7 flex flex-row justify-center">
-          <RevealAnimation delay={0.2} offset={10} className="w-[550px]">
+        <div className="notice py-7 flex flex-row justify-center before:content-[''] before:absolute before:h-full before:w-[30%] md:before:w-[35%] lg:before:w-[40%] before:inset-0 before:grey-to-transparent-grad after:content-[''] after:absolute after:h-full after:w-[30%] md:after:w-[35%] lg:after:w-[40%] after:top-0 after:right-0 after:rotate-180 after:grey-to-transparent-grad">
+          <RevealAnimation delay={0.2} offset={10} className="w-[90%] max-w-[550px]">
             <div className="text-center">All rates subject to sales tax.</div>
           </RevealAnimation>
         </div>
       </div>
 
-      <div className="main-container pt-[2rem] md:pt-[5rem] lg:pt-[8rem] pb-[6rem] md:pb-[9rem] lg:pb-[8rem]">
+      <div className="main-container pt-[2rem] md:pt-[5rem] lg:pt-[8rem] pb-[3rem] md:pb-[9rem] lg:pb-[8rem]">
         {/* flex-wrap + justify-center (rather than a grid) so a trailing, not-quite-full
             row of cards centers itself instead of hugging the left edge. Each card's
             width is set to a 33% share on large screens (minus its portion of the gap). */}
@@ -51,7 +51,7 @@ const MembershipsSection = ({ membershipsData }) => {
               <RevealAnimation
                 key={prefix}
                 delay={0.1 + index * 0.05}
-                className="shrink-0 min-w-0 basis-[calc(33.333%_-_1rem)]">
+                className="shrink-0 min-w-0 basis-full sm:basis-[calc(50%_-_0.75rem)] lg:basis-[calc(33.333%_-_1rem)]">
                 <div className="group relative rounded-[20px] overflow-hidden bg-white h-full flex flex-col text-center">
                   {/* Inset ring lives on its own overlay (not on .group) since a parent's own
                       box-shadow always paints beneath its children, regardless of z-index —

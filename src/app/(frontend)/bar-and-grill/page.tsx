@@ -16,10 +16,10 @@ const BarAndGrill = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/peoria-ridge/banquet-room.jpg"
-          imageOffset="-7%"
+          BGHeroSrc="/images/peoria-ridge/fire-ridge-1.webp"
+          imageOffset="-15%"
           imageHeight="110%"
-          overlayOpacity=".35"
+          overlayOpacity=".75"
           // heroText="Bar & Grill"
         />
         <Menu/>

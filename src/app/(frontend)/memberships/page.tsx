@@ -23,15 +23,15 @@ const Memberships = async () => {
     <Fragment>
       <main className="bg-[#f3f3f3]">
         <HalfHero
-          BGHeroSrc="/images/peoria-ridge/banner-2.jpg"
-          imageOffset="-7%"
-          imageHeight="110%"
-          overlayOpacity=".35"
+          BGHeroSrc="/images/peoria-ridge/fire-ridge-6.webp"
+          imageOffset="-25%"
+          imageHeight="170%"
+          overlayOpacity=".75"
           heroText="Memberships"
         />
         <MembershipsSection membershipsData={membershipsData} />
         <Separator />
-        <section className="pb-[6rem] md:pb-[9rem] lg:pb-[12rem] pt-[1rem] md:pt-[3rem] lg:pt-[8rem] px-5">
+        <section className="pb-[6rem] md:pb-[9rem] lg:pb-[12rem] pt-[3rem] md:pt-[3rem] lg:pt-[8rem] px-5">
           <MembershipInquiryForm />
         </section>
       </main>

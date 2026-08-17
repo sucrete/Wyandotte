@@ -1,6 +1,7 @@
 import heroVectorImg from '@public/images/home-page-34/hero-vector.svg';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
+import { FireIcon } from '../svg-components/Logos';
 import TemperaturePaneCard from './TemperaturePaneCard';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
 import Image from 'next/image';
@@ -18,13 +19,13 @@ const Hero = async () => {
 
   return (
     // saved classNames -> h-[99svh] xl:max-h-[90svh]
-    <section className="bg-cover bg-[url('/images/peoria-ridge/Peoria-photog.webp')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
+    <section className="bg-cover bg-[url('/images/peoria-ridge/fire-ridge-3.webp')] bg-top bg-no-repeat relative z-20 h-[600px] md:h-[99svh]">
       <ParallaxImageBackground
-        src="/images/peoria-ridge/Peoria-photog.webp"
-        offset="-20%"
+        src="/images/peoria-ridge/fire-ridge-3.webp"
+        offset="-8%"
         sizes="(max-width: 768px) 200vw, 100vw"
       />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-60"></div>
 
       <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.3} direction="left" offset={5} instant>
@@ -76,8 +77,21 @@ const Hero = async () => {
               </h1>
             </div>
           </RevealAnimation>
+           <RevealAnimation delay={0.2} offset={10}>
+              <div className="flex flex-row gap-3 items-center max-w-[80vw] md:max-w-[476px] mx-auto">
+                <div className="flex-auto">
+                  <div className="border-t border-[#ffffff49] h-[1px] "></div>
+                </div>
+                <div className="div">
+                  <FireIcon className="fill-[#ffffff97] size-[15px]" />
+                </div>
+                <div className="flex-auto">
+                  <div className="border-t border-[#ffffff49] h-[1px] "></div>
+                </div>
+              </div>
+            </RevealAnimation>
           <RevealAnimation delay={0.2}>
-            <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow">
+            <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[14px]">
               Step onto our pristine courses and feel instantly immersed in the lush surroundings. With rolling terrain,
               natural obstacles, and sparkling water features, every visit offers a round of memorable and engaging
               golf.

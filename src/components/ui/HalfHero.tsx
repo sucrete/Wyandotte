@@ -25,7 +25,7 @@ const HalfHero = ({
       {/* <ProgressiveBlur blurBlockHeight="150px" /> */}
       <ParallaxImageBackground src={BGHeroSrc} offset={imageOffset} height={imageHeight} />
       <div
-        className="bg-scrim-top top-0 left-0 absolute h-[100%] w-[100%] -z-1"
+        className="bg-scrim-hero-darker top-0 left-0 absolute h-[100%] w-[100%] -z-1"
         style={{ opacity: overlayOpacity }}></div>
       <div className="absolute w-full bottom-5 z-5 px-2 lg:px-20 xl:px-25">
         <RevealAnimation delay={0.1}>

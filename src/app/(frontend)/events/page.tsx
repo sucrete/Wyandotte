@@ -21,10 +21,10 @@ const Events = async () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/peoria-ridge/gorg.jpg"
-          imageOffset="-7%"
-          imageHeight="110%"
-          overlayOpacity=".25"
+          BGHeroSrc="/images/peoria-ridge/fire-ridge-3.webp"
+          imageOffset="-15%"
+          imageHeight="250%"
+          overlayOpacity=".5"
           heroText="Events"
         />
         <CalendarComponent eventsData={eventsData} />

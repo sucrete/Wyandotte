@@ -16,8 +16,8 @@ const GolfCourse = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/shared/feeling-this-fairway.jpg"
-          imageOffset="-27%"
+          BGHeroSrc="/images/peoria-ridge/fire-ridge-5.webp"
+          imageOffset="-20%"
           imageHeight="170%"
           overlayOpacity=".35"
           // heroText="Golf Course"

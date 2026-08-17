@@ -7,16 +7,23 @@ import RevealAnimation from '../animation/RevealAnimation';
 import Lightbox from './Lightbox';
 import { Expand } from '../ui/Icons';
 
-import ballroom from '@public/images/peoria-ridge/gallery/ballroom.jpg';
-import ballroom2 from '@public/images/peoria-ridge/gallery/ballroom-2.jpg';
-import prom from '@public/images/peoria-ridge/gallery/prom.jpg';
-import prom2 from '@public/images/peoria-ridge/gallery/prom-2.jpg';
-import promo1 from '@public/images/peoria-ridge/gallery/promo-1.jpg';
+// import ballroom from '@public/images/peoria-ridge/gallery/ballroom.jpg';
+// import ballroom2 from '@public/images/peoria-ridge/gallery/ballroom-2.jpg';
+// import prom from '@public/images/peoria-ridge/gallery/prom.jpg';
+import fr4 from '@public/images/peoria-ridge/gallery/fire-ridge-4.webp';
+import fr7 from '@public/images/peoria-ridge/gallery/fire-ridge-7.webp';
+import fr8 from '@public/images/peoria-ridge/gallery/fire-ridge-8.webp';
+import fr1 from '@public/images/peoria-ridge/gallery/fire-ridge-1.webp';
+import pin from '@public/images/peoria-ridge/gallery/pin-flag.jpg';
+// import prom2 from '@public/images/peoria-ridge/gallery/prom-2.jpg';
+// import promo1 from '@public/images/peoria-ridge/gallery/promo-1.jpg';
 import shot8 from '@public/images/peoria-ridge/gallery/sh-8.webp';
+import gorg from '@public/images/peoria-ridge/gallery/gorg.jpg';
 import unnamed from '@public/images/peoria-ridge/gallery/unnamed.webp';
+import unnamed2 from '@public/images/peoria-ridge/gallery/unnamed-2.webp';
 import wyandotteVert from '@public/images/peoria-ridge/gallery/wyandotte-vert.jpg';
 
-const galleryImages = [ballroom, ballroom2, prom, prom2, promo1, shot8, unnamed, wyandotteVert];
+const galleryImages = [fr4, shot8, fr7, unnamed2, fr8, gorg, fr1, pin, unnamed, wyandotteVert];
 
 const breakpointColumns = {
   default: 4,

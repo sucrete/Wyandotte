@@ -18,10 +18,10 @@ const Contact = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/peoria-ridge/parallax-bg.jpg"
+          BGHeroSrc="/images/peoria-ridge/fire-ridge-2.webp"
           imageOffset="-20%"
           imageHeight="120%"
-          overlayOpacity=".25"
+          overlayOpacity=".75"
           heroText="Contact Us"
         />
         <ContactInfo />

@@ -19,17 +19,17 @@ const Menu = () => {
   return (
     <section className=" pb-[9rem] md:pb-[9rem] lg:pb-[14rem] z-21 relative">
       <div className="main-container flex justify-center relative w-full h-full">
-        <div className="overlay absolute bg-fade-to-white w-full h-[300px] z-18 left-[0rem] top-[3rem] after:content-[''] after:absolute after:left-[0rem] after:top-[300px] after:w-full after:bg-[#ffffff] after:h-[250px]"></div>
-        <div className="paper absolute w-[1100px] h-[600px] max-w-full pt-[5rem] md:pt-[7rem] z-17 lg:pt-[9rem] shadow-2xl left-1/2 -translate-x-1/2 top-[-7rem] bg-[#ffffff]">
+        <div className="overlay absolute bg-fade-to-white w-full h-[300px] z-18 left-[0rem] top-[8rem] after:content-[''] after:absolute after:left-[0rem] after:top-[300px] after:w-full after:bg-[#ffffff] after:h-[250px]"></div>
+        <div className="paper absolute w-[1100px] h-[600px] max-w-full pt-[5rem] md:pt-[7rem] z-17 lg:pt-[9rem] shadow-2xl left-1/2 -translate-x-1/2 top-[-4rem] bg-[#ffffff]">
           <div className="faux-menu border-box absolute inset-0 w-full h-full p-4">
             <div className="border w-full h-full border-fr-primary-800/15"></div>
           </div>
         </div>
-        <div className="copy w-[900px] max-w-full pt-[5rem] md:pt-[7rem] lg:pt-[10rem] -mt-[10rem] relative z-20">
+        <div className="copy w-[900px] max-w-full pt-[5rem] md:pt-[7rem] lg:pt-[10rem] -mt-[9rem] relative z-20">
           <RevealAnimation delay={0.1} offset={10}>
             <h2 className="pb-6 text-4xl text-center">Bar & Grill Menu</h2>
           </RevealAnimation>
-          <div className="intro-wrapper mx-auto max-w-full flex flex-col gap-5 pb-[3rem]">
+          <div className="intro-wrapper mx-auto max-w-full flex flex-col gap-5 pb-14">
             <RevealAnimation delay={0.2} offset={10}>
               <div className="main-container flex flex-row gap-3 items-center ">
                 <div className="flex-auto">
@@ -54,7 +54,7 @@ const Menu = () => {
             </RevealAnimation>
           </div>
 
-          <div className="document space-y-15 text-primary/70">
+          <div className="document space-y-14 text-primary/70">
             <RevealAnimation delay={0.5}>
               <div className="category-wrapper grid grid-cols-7 gap-10">
                 <div className="col-span-4 pl-5">
@@ -110,6 +110,60 @@ const Menu = () => {
                       <li>Hot Dog</li>
                       <li>Fried Mushrooms</li>
                       <li>Chili Dog</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </RevealAnimation>
+             <RevealAnimation offset={10}>
+              <Divider />
+            </RevealAnimation>
+            <RevealAnimation delay={0.5}>
+              <div className="category-wrapper grid grid-cols-7 gap-10">
+                <div className="col-span-4 pl-5">
+                  <div className="h-full flex flex-col justify-center">
+                    <h3 className="-ml-1 pb-3">Grab & Go</h3>
+                    <ul className="text-[12px] space-y-2 list-[square] ps-3.5 marker:text-fr-primary-800/15">
+                      <li>Chef Salad</li>
+                      <li>Grilled Chicken Ceasar Salad</li>
+                      <li>Ham Sandwich</li>
+                      <li>Turkey Sandwich</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="col-span-3">
+                  <Image
+                    className="w-full h-auto"
+                    src="/images/peoria-ridge/food/Hot-Dog-2.webp"
+                    width={700}
+                    height={300}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </RevealAnimation>
+            <RevealAnimation offset={10}>
+              <Divider />
+            </RevealAnimation>
+            <RevealAnimation delay={0.1}>
+              <div className="category-wrapper grid grid-cols-7 gap-10">
+                <div className="col-span-3">
+                  <Image
+                    className="w-full h-auto"
+                    src="/images/peoria-ridge/food/beer-bucket.webp"
+                    width={700}
+                    height={300}
+                    alt=""
+                  />
+                </div>
+                <div className="col-span-4">
+                  <div className="h-full flex flex-col justify-center">
+                    <h3 className="-ml-1 pb-3">Drinks</h3>
+                    {/* <p className="text-[12px] pb-2.5 text-[#696969]">Includes side of fries.</p> */}
+                    <ul className="text-[12px] space-y-2 list-[square] ps-3.5 marker:text-fr-primary-800/15">
+                      <li>Bottled or Fountain Drinks</li>
+                      <li>Beer</li>
+                      <li>Full Bar</li>
                     </ul>
                   </div>
                 </div>

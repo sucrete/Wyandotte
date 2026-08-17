@@ -39,7 +39,7 @@ const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = fal
               : 'translate-y-3 md:translate-y-0',
           className,
         )}>
-        <div className="mx-auto flex w-full max-w-[1470px] px-6 lg:px-16 items-center justify-end relative">
+        <div className="mx-auto flex w-full max-w-[1470px] px-2 lg:px-16 items-center justify-end relative">
           <LogoBox isScrolled={isScrolled} />
           <div className="flex items-center gap-[30px]">
             <nav className="hidden items-center xl:flex">
