@@ -71,27 +71,26 @@ const EventsPreview = () => {
   return (
     <section className="pt-0 pb-16 md:pb-20 lg:pb-[200px] md:pt-15 lg:pt-[100px] bg-[#fafafa] overflow-hidden">
       <div className="max-w-[1510px] mx-auto px-2 lg:px-20 xl:px-25">
-        {/* bg-[radial-gradient(ellipse_500%_180%_at_40%_0%,#fff,#f6ffe6)]  */}
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-5 md:gap-10 lg:gap-24 relative isolate rounded-[21px] p-2 bg-[radial-gradient(ellipse_500%_180%_at_50%_0%,#fff,#f4f4f4)] overflow-hidden before:content-[''] before:absolute before:inset-0 before:-z-10 before:pointer-events-none before:bg-[url('/images/shared/noise-2.png')] before:bg-repeat before:bg-[length:180px_180px] before:opacity-30 shadow-[inset_0_2px_12px_-6px_rgba(0,0,0,0.08)] border-t-[1px] border-t-[rgba(0,0,0,0.0356)] border-b border-white">
           {/* Left — 33% */}
-          <div className="lg:col-span-1 flex flex-col justify-between pt-[2rem] pl-[2rem] pb-[2rem]">
+          <div className="lg:col-span-1 flex flex-col justify-between p-[1rem] md:p-[2rem_0rem_2rem_2rem]">
             <div>
               <RevealAnimation delay={0.1}>
-                <Image className="size-[60px] -ml-3" src="/images/home/golf-ball.png" width={300} height={300} alt="" />
+                <Image className="size-[50px] md:size-[60px] -ml-3 mb-2 md:mb-0" src="/images/home/golf-ball.png" width={300} height={300} alt="" />
               </RevealAnimation>
               <RevealAnimation delay={0.2}>
-                <h2 className="leading-[1.1] text-[2rem] text-fr-primary-800 pb-4 -ml-1">
+                <h2 className="leading-[1.1] text-[1.75rem] md:text-[2rem] text-fr-primary-800 pb-2 md:pb-4 -ml-1">
                   Upcoming <br />
                   Events
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="text-black/60 pb-5">Take a look at what's coming up at Fire Ridge Golf Course!</p>
+                <p className="text-black/60 pb-5 text-[12px] md:text-[14px]">Take a look at what's coming up at Fire Ridge Golf Course!</p>
               </RevealAnimation>
             </div>
 
             <RevealAnimation delay={0.3}>
-              <LinkButton href="/events" className="btn btn-md btn-header-bushwood hover:btn-white-dark w-fit ml-[2px]">
+              <LinkButton href="/events" className="btn btn-md btn-header-bushwood hover:btn-white-dark w-fit ml-[2px] max-md:[&span]:text-[12px]">
                 See all events
               </LinkButton>
             </RevealAnimation>
@@ -109,10 +108,10 @@ const EventsPreview = () => {
                           {formatEventDate(event.date)}
                         </div>
                         <div className="col-span-4 pt-6 pr-6 pb-6 pl-1">
-                          <h3 className="text-heading-5 text-black text-[18px] pb-2 area-700 tracking-normal">
+                          <h3 className="text-heading-5 text-black text-[14px] md:text-[18px] pb-2 area-700 tracking-normal">
                             {event.title}
                           </h3>
-                          <p className="text-black/70 text-[14px] pb-4">{event.body}</p>
+                          <p className="text-black/70 text-[12px] md:text-[14px] pb-4">{event.body}</p>
                           {event.linkQuestionMark && event.linkUrl && (
                             <LinkButton
                               href={event.linkUrl}

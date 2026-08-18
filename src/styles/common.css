@@ -373,8 +373,7 @@ table {
 
     /* Toolbar Title */
     & .fc-toolbar-title {
-      @apply text-[32px] md:text-[47px];
-
+      @apply text-[32px] md:text-[47px] text-center absolute left-1/2 bottom-1/2 -translate-x-1/2 -translate-y-1/2 text-nowrap;
       font-size: 32px !important;
       @media (min-width: 768px) {
         font-size: 47px !important;
@@ -448,7 +447,9 @@ table {
 
 /* FullCalendar header bar */
 .fc-header-toolbar {
+  @apply relative;
   .fc-toolbar-chunk {
+    @apply relative;
     .fc-toolbar-title {
       font-size: 47px;
     }

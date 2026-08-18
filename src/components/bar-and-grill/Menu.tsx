@@ -159,7 +159,7 @@ const Menu = () => {
                 <div className="col-span-3">
                   <Image
                     className="w-full h-auto"
-                    src="/images/peoria-ridge/food/beer-bucket.webp"
+                    src="/images/peoria-ridge/food/Beer-Bucket.webp"
                     width={700}
                     height={300}
                     alt=""

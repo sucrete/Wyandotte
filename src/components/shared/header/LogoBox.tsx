@@ -31,7 +31,7 @@ const LogoBox = ({ isScrolled }: LogoBoxProps) => {
       <Link href="/">
         <span className="sr-only">Home</span>
         <figure className="max-w-[100%] duration-500">
-          <FireRidgeLogoFull className='fiery' isMobile={isMobile} transparent={isScrolled} />
+          <FireRidgeLogoFull className={cn(!isMobile && 'fiery')} isMobile={isMobile} transparent={isScrolled} />
         </figure>
       </Link>
     </div>

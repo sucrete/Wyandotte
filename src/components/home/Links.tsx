@@ -13,15 +13,15 @@ gsap.registerPlugin(ScrollTrigger);
 const IntrasiteLinks = [
   {
     id: 1,
-    URL: '/greens-fees',
-    text: 'Greens Fees',
-    imgURL: '/images/peoria-ridge/promo-4.jpg',
+    URL: '/events',
+    text: 'Events',
+    imgURL: '/images/peoria-ridge/gallery/prom-2.jpg',
   },
   {
     id: 2,
     URL: '/bar-and-grill',
     text: 'Bar & Grill',
-    imgURL: '/images/peoria-ridge/course-banner.webp',
+    imgURL: '/images/peoria-ridge/fire-ridge-1.webp',
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const LinkCard = ({ linkItem }: LinkCardProps) => {
   return (
     <Link href={linkItem.URL} className="block group">
       <div
-        className={`card-body w-full h-[160px] md:h-[175px] lg:h-[175px] xl:h-[150px] rounded-[15px] relative overflow-hidden cursor-pointer realistic-shadow ${HOVER_DURATION}`}
+        className={`card-body w-full h-[120px] md:h-[175px] xl:h-[150px] rounded-[15px] relative overflow-hidden cursor-pointer realistic-shadow ${HOVER_DURATION}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
         {/* LAYER 1: Background Image & Dark Overlay */}
@@ -106,7 +106,7 @@ const Links = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16 ">
         <div
           ref={ref}
-          className="rounded-[25px] md:rounded-[32px] overflow-hidden p-4 md:p-6 transition-colors duration-250 shadow-[inset_1px_1px_0_rgba(255,255,255,0.75),inset_0_0_5px_rgba(255,255,255,0.75)]">
+          className="rounded-[25px] md:rounded-[32px] overflow-hidden p-4 md:p-6 transition-colors duration-250 shadow-[inset_0_0_5px_rgba(255,255,255,0.75)]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-6">
             {IntrasiteLinks.map((linkItem, index) => (
               <RevealAnimation key={linkItem.id} delay={index * 0.1}>

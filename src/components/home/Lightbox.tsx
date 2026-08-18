@@ -103,7 +103,7 @@ const Lightbox = ({ images, index, onClose, onNavigate }: LightboxProps) => {
 
           <Dialog.Close
             aria-label="Close"
-            className="absolute top-6 right-6 flex size-11 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
+            className="absolute top-6 right-6 z-20 flex size-11 cursor-pointer items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-colors duration-200 hover:bg-white/20">
             <X className="size-4 fill-white" />
           </Dialog.Close>
 
