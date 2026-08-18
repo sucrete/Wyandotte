@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Image from 'next/image';
+import { cn } from '@/utils/cn';
 
 // Placeholder events — replace with real Fire Ridge events (or a Sanity query) when available.
 // `date` is an ISO day string; `linkQuestionMark` controls whether the item renders a link.
@@ -88,7 +89,6 @@ const EventsPreview = () => {
                 <p className="text-black/60 pb-5 text-[12px] md:text-[14px]">Take a look at what's coming up at Fire Ridge Golf Course!</p>
               </RevealAnimation>
             </div>
-
             <RevealAnimation delay={0.3}>
               <LinkButton href="/events" className="btn btn-md btn-header-bushwood hover:btn-white-dark w-fit ml-[2px] max-md:[&span]:text-[12px]">
                 See all events
@@ -104,20 +104,20 @@ const EventsPreview = () => {
                   <li key={event.id}>
                     <RevealAnimation delay={0.2 + index * 0.1} offset={20}>
                       <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#5800013a,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
-                        <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[9px]">
+                        <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[9px] max-md:hidden">
                           {formatEventDate(event.date)}
                         </div>
-                        <div className="col-span-4 pt-6 pr-6 pb-6 pl-1">
+                        <div className="col-span-5 md:col-span-4 p-5 md:pt-6 md:pr-6 md:pb-6 md:pl-1">
                           <h3 className="text-heading-5 text-black text-[14px] md:text-[18px] pb-2 area-700 tracking-normal">
                             {event.title}
                           </h3>
-                          <p className="text-black/70 text-[12px] md:text-[14px] pb-4">{event.body}</p>
+                          <p className={cn("text-black/70 text-[12px] md:text-[14px]", event.linkQuestionMark ? 'pb-4' : 'pb-0')}>{event.body}</p>
                           {event.linkQuestionMark && event.linkUrl && (
                             <LinkButton
                               href={event.linkUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="btn-very-small btn-ghost w-fit">
+                              className="btn-very-small btn-ghost w-fit -mb-2">
                               {event.linkText}
                             </LinkButton>
                           )}
