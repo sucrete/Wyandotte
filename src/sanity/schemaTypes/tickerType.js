@@ -18,7 +18,7 @@ export default {
     },
     {
       name: 'tickerArray',
-      title: 'Notices Content',
+      title: 'Notices',
       type: 'array',
       of: [{ type: 'string' }],
       hidden: ({ document }) => !document?.tickerQuestion,

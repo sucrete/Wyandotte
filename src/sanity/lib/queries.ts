@@ -55,3 +55,11 @@ export const TICKER_QUERY = defineQuery(`*[_type == "ticker"][0] {
   tickerQuestion,
   tickerArray
 }`)
+
+
+export const MENU_QUERY = defineQuery(`{
+  "entrees": *[_id == "menu-entrees"][0] { title, description, items },
+  "quickBites": *[_id == "menu-quick-bites"][0] { title, description, items },
+  "grabAndGo": *[_id == "menu-grab-and-go"][0] { title, description, items },
+  "drinks": *[_id == "menu-drinks"][0] { title, description, items }
+}`)

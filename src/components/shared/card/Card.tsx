@@ -1,6 +1,7 @@
 import { cn } from '@/utils/cn';
 import Image from 'next/image';
 import LinkButton from '../../ui/button/LinkButton';
+import { withProtocol } from '@/utils/url';
 
 interface CardProps {
   imgURL: string;
@@ -39,7 +40,7 @@ const Card = ({ imgURL = '', title, description, linkURL = '', linkText = '', lq
           <div className="flex justify-start md:block">
             {linkQuestion && (
               <LinkButton
-                href={linkURL}
+                href={withProtocol(linkURL)}
                 className="btn btn-md btn-white hover:btn-secondary w-full sm:w-auto"
                 aria-label={`Read more about ${title}`}
                 target="_blank">

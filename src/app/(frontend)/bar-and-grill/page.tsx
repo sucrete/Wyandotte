@@ -6,12 +6,17 @@ import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { Fragment } from 'react';
 
+import { sanityFetch } from '@/sanity/lib/live';
+import { MENU_QUERY } from '@/sanity/lib/queries';
+
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Bar & Grill | Fire Ridge Golf Course',
 };
 
-const BarAndGrill = () => {
+const BarAndGrill = async () => {
+  const { data: menuData } = await sanityFetch({ query: MENU_QUERY });
+
   return (
     <Fragment>
       <main>
@@ -22,7 +27,7 @@ const BarAndGrill = () => {
           overlayOpacity=".75"
           // heroText="Bar & Grill"
         />
-        <Menu/>
+        <Menu menuData={menuData} />
       </main>
       <Footer />
     </Fragment>

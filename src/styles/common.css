@@ -439,7 +439,7 @@ table {
 
 /* calendar event band */
 .fc-h-event {
-  @apply bg-bushwood-900 border-none transition-all hover:bg-bushwood-800 min-h-[.5rem] ease-in-out duration-300 px-[15px] py-[3px] rounded-[2px];
+  @apply bg-[#580001] border-none transition-all hover:bg-[#810001] min-h-[.5rem] ease-in-out duration-300 px-[5px] md:px-[15px] py-[3px] rounded-[2px];
 }
 .fc-event-title-container {
   @apply h-fit text-center;
@@ -450,9 +450,13 @@ table {
   @apply relative;
   .fc-toolbar-chunk {
     @apply relative;
-    .fc-toolbar-title {
-      font-size: 47px;
+    &:nth-of-type(2) {
+      @apply absolute left-1/2 bottom-[3rem] md:bottom-1/2 -translate-x-1/2 -translate-y-1/2;
+      .fc-toolbar-title {
+        @apply text-[25px] md:text-[47px] text-nowrap;
+      }
     }
+
     &:last-of-type {
       display: flex;
     }

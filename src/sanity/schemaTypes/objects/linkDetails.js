@@ -22,7 +22,9 @@ export default {
       title: 'Link URL',
       type: 'url',
       validation: (rule) => [
-        rule.uri({ scheme: ['http', 'https'] }).error("Invalid URL — make sure it starts with 'https://'"),
+        rule
+          .uri({ scheme: ['http', 'https'], allowRelative: true })
+          .error('Invalid URL — check for typos.'),
         rule.custom((value, context) => {
           if (context.document?.linkQuestion && !value) {
             return 'A URL is required when a link is enabled.';

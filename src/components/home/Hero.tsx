@@ -1,10 +1,8 @@
-import heroVectorImg from '@public/images/home-page-34/hero-vector.svg';
+
 import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
 import { FireIcon } from '../svg-components/Logos';
 import TemperaturePaneCard from './TemperaturePaneCard';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
-import Image from 'next/image';
 import { fetchWeather, getWeatherLabel } from '@/utils/weather';
 
 const Hero = async () => {
@@ -58,7 +56,7 @@ const Hero = async () => {
       </div>
       <div className="main-container center-it top-[54%] min-w-[90vw] md:min-w-[1290px]">
         <div className="text-center md:space-y-4 space-y-1">
-          <RevealAnimation delay={0.1}>
+          <RevealAnimation delay={0.1} offset={10}>
             {/* 1. Relative Container for the "Stack" */}
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
@@ -80,7 +78,7 @@ const Hero = async () => {
               </h1>
             </div>
           </RevealAnimation>
-          <RevealAnimation delay={0.2} offset={10}>
+          <RevealAnimation delay={0.3} offset={20}>
             <div className="flex flex-row gap-3 items-center max-w-[60vw] md:max-w-[476px] mx-auto">
               <div className="flex-auto">
                 <div className="border-t border-[#ffffff49] h-[1px] "></div>
@@ -93,7 +91,7 @@ const Hero = async () => {
               </div>
             </div>
           </RevealAnimation>
-          <RevealAnimation delay={0.2}>
+          <RevealAnimation delay={0.5} offset={10}>
             <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[12px] md:text-[14px]">
               Step onto our pristine courses and feel instantly immersed in the lush surroundings.{' '}
               <span className="max-md:hidden">

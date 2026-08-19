@@ -31,6 +31,13 @@ NextSaaS Buttons Styles
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' viewBox='0 0 256 256'%3E%3Cpath d='M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z'%3E%3C/path%3E%3C/svg%3E");
   }
 }
+@utility btn-header-bushwood-v2 {
+  @apply shadow-1 bg-taxi-cab border-taxi-cab text-[#342b00] medium [&_span]:text-[12px] md:[&_span]:text-[14px] max-md:px-4 max-md:pt-1 max-md:pb-1.75;
+  /* white arrow */
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' viewBox='0 0 256 256'%3E%3Cpath d='M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z'%3E%3C/path%3E%3C/svg%3E");
+  }
+}
 
 @utility btn-primary {
   @apply bg-primary-500 shadow-1 border-primary-600 text-white;
@@ -97,7 +104,14 @@ NextSaaS Buttons Styles
 }
 
 @utility btn-ghost {
-   @apply bg-[#025142]/5 text-[#001914] border-0 before:fill-[#001914];
+   @apply bg-[#1f1f1f0d] text-[#001914] border-0 before:fill-[#001914];
+   &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%231a1a1c' viewBox='0 0 256 256'%3E%3Cpath d='M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z'%3E%3C/path%3E%3C/svg%3E");
+  }
+}
+
+@utility btn-flyer {
+   @apply bg-transparent text-[#001914] border-[#1f1f1f0d] before:fill-[#001914];
    &::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%231a1a1c' viewBox='0 0 256 256'%3E%3Cpath d='M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z'%3E%3C/path%3E%3C/svg%3E");
   }

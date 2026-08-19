@@ -6,15 +6,6 @@ import rateValidation from '../../utils/rateValidation';
 // don't collide.
 const membershipTierFields = (fieldPrefix) => [
   {
-    name: `${fieldPrefix}Pdf`,
-    title: 'PDF Document',
-    type: 'file',
-    options: {
-      accept: 'application/pdf',
-    },
-    // optional — the front end only shows the download button if this is set
-  },
-  {
     name: `${fieldPrefix}Heading`,
     type: 'string',
     validation: (rule) => rule.required().max(35),

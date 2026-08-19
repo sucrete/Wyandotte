@@ -5,36 +5,40 @@ import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/LinkButton';
 import Image from 'next/image';
 import { cn } from '@/utils/cn';
+import { withProtocol } from '@/utils/url';
 
-// Placeholder events — replace with real Fire Ridge events (or a Sanity query) when available.
-// `date` is an ISO day string; `linkQuestionMark` controls whether the item renders a link.
-export const events = [
-  {
-    id: 'end-of-summer-scramble',
-    title: 'End of Summer Scramble',
-    body: 'A four-person scramble to send off the season. Shotgun start at 9am, with lunch on the deck and prizes for closest to the pin on 3 and 6.',
-    date: '2026-08-29',
-    linkQuestionMark: true,
-    linkUrl: 'https://www.google.com',
-    linkText: 'Register',
-  },
-  {
-    id: 'twilight-league-finals',
-    title: 'Twilight League Finals',
-    body: 'The last night of summer twilight league. Teams tee off at 5pm, and the season standings are settled over nine holes as the light goes.',
-    date: '2026-09-05',
-    linkQuestionMark: false,
-  },
-  {
-    id: 'labor-day-classic',
-    title: 'Labor Day Classic',
-    body: 'An individual stroke play round with flights for every handicap. Open to members and the public, with the course walking-only until noon.',
-    date: '2026-09-07',
-    linkQuestionMark: true,
-    linkUrl: 'https://www.google.com',
-    linkText: 'More Info',
-  },
-];
+// e.g. "1" -> "st", "2" -> "nd", "3" -> "rd", "4"-"20" -> "th", then repeats.
+const getOrdinalSuffix = (day) => {
+  if (day > 3 && day < 21) return 'th';
+  switch (day % 10) {
+    case 1:
+      return 'st';
+    case 2:
+      return 'nd';
+    case 3:
+      return 'rd';
+    default:
+      return 'th';
+  }
+};
+
+// e.g. "2026-09-01" -> "Tuesday, September 1st"
+const formatFullEventDate = (date) => {
+  const parsed = new Date(`${date}T00:00:00`);
+  const weekday = parsed.toLocaleDateString('en-US', { weekday: 'long' });
+  const month = parsed.toLocaleDateString('en-US', { month: 'long' });
+  const day = parsed.getDate();
+
+  return `${weekday}, ${month} ${day}${getOrdinalSuffix(day)}`;
+};
+
+// Appends " - <end date>" when the event spans multiple days.
+const formatEventDateRange = (event) => {
+  const start = formatFullEventDate(event.start);
+  if (!event.multidayEvent || !event.end) return start;
+
+  return `${start} - ${formatFullEventDate(event.end)}`;
+};
 
 // Returns the month and day as two separate elements; .stack-dates stacks them.
 const formatEventDate = (date) => {
@@ -52,22 +56,29 @@ const formatEventDate = (date) => {
   );
 };
 
-const EventsPreview = () => {
+const EventsPreview = ({ eventsData }) => {
   // Resolved after mount so the list reflects when the visitor actually landed on the
   // page, rather than the moment the page was statically rendered.
   const [upcomingEvents, setUpcomingEvents] = useState([]);
+  // Distinguishes "haven't filtered yet" from "filtered and there's truly nothing" —
+  // without it the section would hide on every load until the effect below runs
+  // (upcomingEvents starts empty on both server and first client render).
+  const [hasChecked, setHasChecked] = useState(false);
 
   useEffect(() => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
     setUpcomingEvents(
-      events
-        .filter((event) => new Date(`${event.date}T00:00:00`) >= today)
-        .sort((a, b) => a.date.localeCompare(b.date))
+      (eventsData ?? [])
+        .filter((event) => new Date(`${event.start}T00:00:00`) >= today)
+        .sort((a, b) => a.start.localeCompare(b.start))
         .slice(0, 3),
     );
-  }, []);
+    setHasChecked(true);
+  }, [eventsData]);
+
+  if (hasChecked && upcomingEvents.length === 0) return null;
 
   return (
     <section className="pt-0 pb-16 md:pb-20 lg:pb-[200px] md:pt-15 lg:pt-[100px] bg-[#fafafa] overflow-hidden">
@@ -90,7 +101,7 @@ const EventsPreview = () => {
               </RevealAnimation>
             </div>
             <RevealAnimation delay={0.3}>
-              <LinkButton href="/events" className="btn btn-md btn-header-bushwood hover:btn-white-dark w-fit ml-[2px] max-md:[&span]:text-[12px]">
+              <LinkButton href="/events" className="btn btn-md btn-header-bushwood-v2 hover:btn-white-dark w-fit ml-[2px]">
                 See all events
               </LinkButton>
             </RevealAnimation>
@@ -101,24 +112,36 @@ const EventsPreview = () => {
             <div className="list-wrap ">
               <ul className="flex flex-col gap-2">
                 {upcomingEvents.map((event, index) => (
-                  <li key={event.id}>
+                  <li key={event._id}>
                     <RevealAnimation delay={0.2 + index * 0.1} offset={20}>
-                      <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#5800013a,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
+                      <div className="grid grid-cols-5 gap-8 rounded-[15px] overflow-hidden bg-[#ffffff] transition-all duration-300 shadow-[inset_0_0_0px_1px_rgba(0,0,0,.06),0px_1px_6px_-2px_rgba(0,0,0,0.05)] hover:shadow-[inset_0_0_0px_1px_#580001b9,0_1px_1px_rgba(0,0,0,0.005),0_2px_2px_rgba(0,0,0,0.01),0_4px_4px_rgba(0,0,0,0.015),0_8px_8px_rgba(0,0,0,0.02),0_16px_16px_rgba(0,0,0,0.025)]">
                         <div className="col-span-1 w-full flex flex-col justify-center bg-[#fafafa] ml-2 mb-2 mt-2 rounded-[9px] max-md:hidden">
-                          {formatEventDate(event.date)}
+                          {formatEventDate(event.start)}
                         </div>
                         <div className="col-span-5 md:col-span-4 p-5 md:pt-6 md:pr-6 md:pb-6 md:pl-1">
-                          <h3 className="text-heading-5 text-black text-[14px] md:text-[18px] pb-2 area-700 tracking-normal">
+                          <h3 className="text-heading-5 text-black text-[16px] md:text-[18px] pb-2 area-700 tracking-normal">
                             {event.title}
                           </h3>
-                          <p className={cn("text-black/70 text-[12px] md:text-[14px]", event.linkQuestionMark ? 'pb-4' : 'pb-0')}>{event.body}</p>
-                          {event.linkQuestionMark && event.linkUrl && (
+                          <p className="md:hidden text-[#580001] text-[12px] pb-1 area-600">
+                            {formatEventDateRange(event)}
+                          </p>
+                          <p className={cn("text-black/70 text-[12px] md:text-[14px]", event.linkQuestion ? 'pb-4' : 'pb-0')}>{event.eventDescription}</p>
+                          {event.flyerQuestion && event.flyer?.asset?.url && (
                             <LinkButton
-                              href={event.linkUrl}
+                              href={event.flyer.asset.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="btn-very-small btn-flyer w-fit -mb-2 mr-2">
+                              View flyer
+                            </LinkButton>
+                          )}
+                          {event.linkQuestion && event.linkDeets?.linkURL && (
+                            <LinkButton
+                              href={withProtocol(event.linkDeets.linkURL)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="btn-very-small btn-ghost w-fit -mb-2">
-                              {event.linkText}
+                              {event.linkDeets.linkText}
                             </LinkButton>
                           )}
                         </div>

@@ -12,19 +12,24 @@ import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 import { Fragment } from 'react';
 
+import { sanityFetch } from '@/sanity/lib/live';
+import { EVENTS_QUERY } from '@/sanity/lib/queries';
+
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Fire Ridge Golf Course | A scenic golf destination in Cottage Grove, OR.',
 };
 
 const Home = async () => {
+  const { data: eventsData } = await sanityFetch({ query: EVENTS_QUERY });
+
   return (
     <Fragment>
       <main>
         <Hero />
         <Links />
         <CourseIntro />
-        <EventsPreview />
+        <EventsPreview eventsData={eventsData} />
         <Gallery />
 
         {/* <NewsletterSignup inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent" /> */}

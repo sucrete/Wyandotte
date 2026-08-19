@@ -45,7 +45,7 @@ const MembershipsSection = ({ membershipsData }) => {
             const description = data[`${prefix}Description`];
             const monthly = data[`${prefix}Monthly`];
             const yearly = data[`${prefix}Yearly`];
-            const pdfUrl = data[`${prefix}Pdf`]?.asset?.url;
+            // const pdfUrl = data[`${prefix}Pdf`]?.asset?.url;
 
             return (
               <RevealAnimation
@@ -85,7 +85,7 @@ const MembershipsSection = ({ membershipsData }) => {
                     </div>
 
                     <div className="mt-auto pt-6 section-2">
-                      {pdfUrl && (
+                      {/* {pdfUrl && (
                         <div className="pt-4">
                           <LinkButton
                             href={pdfUrl}
@@ -95,7 +95,7 @@ const MembershipsSection = ({ membershipsData }) => {
                             View Application
                           </LinkButton>
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>

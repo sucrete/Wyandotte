@@ -6,6 +6,7 @@ import { createPlugin, sliceEvents, EventClickArg } from '@fullcalendar/core';
 import RevealAnimation from '../animation/RevealAnimation';
 import moment from 'moment';
 import { cn } from '@/utils/cn';
+import { withProtocol } from '@/utils/url';
 
 import { X } from '@/components/ui/Icons';
 
@@ -90,7 +91,7 @@ const CalendarComponent = ({ eventsData }: { eventsData: SanityEvent[] }) => {
                    ${
                      seg.def.extendedProps.flyerQuestion
                        ? `
-                    <a href=${seg.def.extendedProps?.flyer?.asset?.url} target="_blank" class="btn-sm-dark bg-white border-bushwood-900 border-[1.5px] text-bushwood hover:text-white hover:bg-bushwood-900">
+                    <a href=${seg.def.extendedProps?.flyer?.asset?.url} target="_blank" class="btn-sm-dark bg-white border-[#580001] border-[1.5px] text-[#580001] hover:text-white hover:bg-[#580001]">
                       <span>View flyer</span>
                     </a>`
                        : ''
@@ -98,7 +99,7 @@ const CalendarComponent = ({ eventsData }: { eventsData: SanityEvent[] }) => {
                    ${
                      seg.def.extendedProps.linkQuestion
                        ? `
-                    <a href=${seg.def.extendedProps.linkDeets.linkURL} target="_blank" class="btn-sm-dark border-bushwood-900 bg-bushwood-900 text-accent hover:bg-bushwood-800">
+                    <a href=${withProtocol(seg.def.extendedProps.linkDeets.linkURL)} target="_blank" class="btn-sm-dark border-[#580001] bg-[#580001] text-accent hover:bg-[#810001]">
                       <span>${seg.def.extendedProps.linkDeets.linkText}</span>
                     </a>`
                        : ''
@@ -135,7 +136,7 @@ const CalendarComponent = ({ eventsData }: { eventsData: SanityEvent[] }) => {
                   </h3>
                   <button
                     onClick={() => setSelectedEvent(null)}
-                    className="cursor-pointer absolute top-8 right-8 h-10 w-10 bg-[#f9f9f9] hover:bg-ns-green-light rounded-full flex items-center justify-center text-black/70 transition-all">
+                    className="cursor-pointer absolute top-8 right-8 h-10 w-10 bg-[#f9f9f9] hover:bg-[lab(97_5.35_3.72)] rounded-full flex items-center justify-center text-black/70 transition-all">
                     <X className="size-[20px]" />
                   </button>
                 </div>
@@ -170,15 +171,15 @@ const CalendarComponent = ({ eventsData }: { eventsData: SanityEvent[] }) => {
                       <a
                         href={selectedEvent.extendedProps?.flyer?.asset?.url}
                         target="_blank"
-                        className="flex-1 btn-sm-dark bg-white border-bushwood-900 border-[1.5px] py-[8px] text-bushwood text-[14px] hover:text-white hover:bg-bushwood-900 before:content-none">
+                        className="flex-1 btn-sm-dark bg-white border-[#580001] border-[1.5px] py-[8px] text-[#580001] text-[14px] hover:text-white hover:bg-[#580001] before:content-none">
                         View flyer
                       </a>
                     )}
                     {selectedEvent.extendedProps.linkQuestion && (
                       <a
                         target="_blank"
-                        href={selectedEvent.extendedProps.linkDeets?.linkURL}
-                        className="flex-1 btn-sm-dark border-bushwood-900 bg-bushwood-900 text-accent py-[8px] text-[14px] hover:bg-bushwood-800 before:content-none">
+                        href={withProtocol(selectedEvent.extendedProps.linkDeets?.linkURL)}
+                        className="flex-1 btn-sm-dark border-[#580001] bg-[#580001] text-accent py-[8px] text-[14px] hover:bg-[#810001] before:content-none">
                         {selectedEvent.extendedProps.linkDeets.linkText}
                       </a>
                     )}

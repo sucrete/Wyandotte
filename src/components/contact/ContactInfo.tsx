@@ -23,8 +23,8 @@ const contactInfoItems = [
     src: '/images/icons/email.svg',
     imageSize: { w: 15, h: 15 },
     title: 'Email Us',
-    content: 'info@wyandottegolfcourse.com',
-    link: 'mailto:info@wyandottegolfcourse.com',
+    content: 'info@fireridgegolf.com',
+    link: 'mailto:info@fireridgegolf.com',
   },
   {
     id: 3,

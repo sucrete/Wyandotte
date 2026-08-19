@@ -2,10 +2,14 @@
 
 import * as Dialog from '@radix-ui/react-dialog';
 import Image, { StaticImageData } from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import RevealAnimation from '../animation/RevealAnimation';
 import { SmallArrow, X } from '../ui/Icons';
 import { cn } from '@/utils/cn';
+
+// Minimum horizontal travel (px) before a touch drag counts as a swipe rather
+// than a tap or an incidental wobble.
+const SWIPE_THRESHOLD = 50;
 
 interface LightboxProps {
   images: StaticImageData[];
@@ -61,6 +65,26 @@ const Lightbox = ({ images, index, onClose, onNavigate }: LightboxProps) => {
   const open = index !== null;
   const image = index !== null ? images[index] : null;
   const [pressedDirection, setPressedDirection] = useState<-1 | 1 | null>(null);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+
+  const handleTouchStart = (event: React.TouchEvent) => {
+    const touch = event.touches[0];
+    touchStart.current = { x: touch.clientX, y: touch.clientY };
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent) => {
+    if (!touchStart.current) return;
+    const touch = event.changedTouches[0];
+    const deltaX = touch.clientX - touchStart.current.x;
+    const deltaY = touch.clientY - touchStart.current.y;
+    touchStart.current = null;
+
+    // Require the swipe to be mostly horizontal so a vertical drag (e.g.
+    // scrolling attempt) doesn't get misread as a navigation gesture.
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+    onNavigate(deltaX < 0 ? 1 : -1);
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -96,6 +120,8 @@ const Lightbox = ({ images, index, onClose, onNavigate }: LightboxProps) => {
           onClick={(event) => {
             if (event.target === event.currentTarget) onClose();
           }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
           className="fixed inset-0 z-[1001] outline-none">
           <Dialog.Title className="sr-only">
             Gallery image {index !== null ? index + 1 : ''} of {images.length}
