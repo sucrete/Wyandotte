@@ -50,10 +50,10 @@ const ContactForm = () => {
 
   return (
     <RevealAnimation delay={0.1}>
-      <form onSubmit={handleSubmit} noValidate className={`${CARD_CLASS} p-6 md:p-10 space-y-5`}>
+      <form onSubmit={handleSubmit} noValidate className={`${CARD_CLASS} py-10 px-6 md:py-12 md:px-10 space-y-5`}>
         <div className="text-center pb-2">
           <h3 className="text-heading-5 md:text-[1.75rem] text-fr-primary-800 pb-2">Send Us a Message</h3>
-          <p className="text-primary/70">After hours? Fill out the form below and we&apos;ll follow up.</p>
+          <p className="text-primary/70 pb-5">After hours? Fill out the form below and we&apos;ll follow up.</p>
         </div>
 
         {status === 'error' && (

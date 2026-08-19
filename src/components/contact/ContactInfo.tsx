@@ -39,7 +39,7 @@ const contactInfoItems = [
 const ContactInfo = () => {
   return (
     <section
-      className=" py-14 md:py-16 lg:py-20 xl:py-[10rem] bg-background-4"
+      className=" pt-12 pb-4 md:py-16 lg:py-20 xl:py-[10rem] bg-background-4"
       aria-label="Contact Information and Form">
       <div className="main-container">
         <div className="space-y-[70px]">
@@ -52,14 +52,14 @@ const ContactInfo = () => {
               <h2>Get directions or contact us directly.</h2>
             </RevealAnimation>
           </div> */}
-          <div className="flex lg:items-stretch flex-col justify-center items-center gap-10 lg:flex-row lg:gap-8 xl:gap-10">
+          <div className="flex lg:items-stretch flex-col justify-center items-center gap-4 md:gap-10 lg:flex-row lg:gap-8 xl:gap-10">
             {/* contact info cards */}
-            <div className="flex first-column flex-col gap-8 md:justify-between md:flex-row lg:flex-col">
+            <div className="flex first-column flex-col gap-4 md:gap-8 md:justify-between md:flex-row lg:flex-col max-md:w-full">
               {contactInfoItems.map((item) => (
                 <RevealAnimation key={item.id} delay={0.4}>
                   <div className="bg-accent rounded-[20px] p-11 space-y-6 w-full md:max-w-[371px] text-center relative overflow-hidden">
                     <figure className="size-12 mx-auto">
-                      <div className="icon-wrapper rounded-[8px] bg-taxi-cab p-3 shadow-sm">
+                      <div className="icon-wrapper rounded-[8px] bg-fr-primary-700 p-3 shadow-sm ring ring-inset ring-fr-primary-500/50">
                         <Image
                           src={item.src}
                           alt=""

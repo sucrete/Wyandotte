@@ -38,7 +38,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className="relative pt-0 pb-16 md:py-20 lg:py-[200px] bg-[#ffffff] overflow-hidden border-t border-[#f2f2f2]">
+    <section className="relative py-16 md:py-20 lg:py-[200px] bg-[#ffffff] overflow-hidden border-t border-[#f2f2f2]">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
         <Masonry
           breakpointCols={breakpointColumns}

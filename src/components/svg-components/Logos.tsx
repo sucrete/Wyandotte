@@ -182,7 +182,7 @@ export const FireRidgeLogoFull = ({ className = '', transparent = false, isMobil
 export const FireIcon = ({ className = 'fill-[#e9e9e9]' }: ToggleLogoProps) => {
   return (
     <svg
-      className={className}
+      className={cn(className)}
       id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
