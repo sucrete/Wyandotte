@@ -41,6 +41,10 @@
   }
 }
 
+.cal-list-text {
+  @apply text-[12px] md:text-[14px];
+}
+
 .fc-theme-standard .fc-scrollgrid {
   border-top: none !important;
   border-left: none !important;
@@ -792,21 +796,21 @@ Common Styles all over the sites
 .animated-arrow {
   @apply transition-transform;
   animation: arrow-animation 5s ease-in-out infinite;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 @keyframes arrow-animation {
   from {
     transform: translateY(0);
-    opacity: .6;
+    opacity: 0.6;
   }
   50% {
     transform: translateY(-10px);
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     transform: translateY(0);
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
