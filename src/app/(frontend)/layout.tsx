@@ -1,5 +1,7 @@
 import '@/app/globals.css';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import Navbar from '@/components/shared/header/Navbar';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
 import { AppContextProvider } from '@/context/AppContext';
@@ -34,6 +36,9 @@ export default async function FrontendLayout({
         </Suspense>
       </AppContextProvider>
       <SanityLive />
+      {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      )}
     </>
   );
 }

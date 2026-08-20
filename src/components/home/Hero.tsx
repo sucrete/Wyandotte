@@ -1,9 +1,12 @@
-
 import RevealAnimation from '../animation/RevealAnimation';
-import { FireIcon } from '../svg-components/Logos';
-import TemperaturePaneCard from './TemperaturePaneCard';
+import Image from 'next/image';
 import ParallaxImageBackground from '../ui/ParallaxImageBackground';
+import TemperaturePaneCard from './TemperaturePaneCard';
 import { fetchWeather, getWeatherLabel } from '@/utils/weather';
+
+import { FireIcon } from '../svg-components/Logos';
+import Arrow from '@public/images/home/reg-arrow.svg';
+import FancyArrow from '@public/images/home/fancy-arrow.svg';
 
 const Hero = async () => {
   const data = await fetchWeather();
@@ -25,8 +28,10 @@ const Hero = async () => {
         sizes="(max-width: 768px) 200vw, 100vw"
       />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30 md:opacity-50"></div>
-
-      <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
+      <div className="absolute left-1/2 -bottom-7 -translate-x-1/2 -translate-y-1/2 md:hidden">
+        <Image className="animated-arrow opacity-50" src={FancyArrow} width={15} height={75} alt="" />
+      </div>
+      {/* <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.3} direction="left" offset={5} instant>
           <a
             href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
@@ -48,7 +53,7 @@ const Hero = async () => {
             />
           </a>
         </RevealAnimation>
-      </div>
+      </div> */}
 
       <div className="temperature-pane hidden md:block absolute md:right-[13rem] md:bottom-[3rem]">
         {/* shadow-[0_20px_25px_-5px_rgba(0,0,0,0.08),0_10px_10px_-5px_rgba(0,0,0,0.02),inset_0_0_20px_rgba(236,236,236,0.18)] */}
@@ -60,20 +65,7 @@ const Hero = async () => {
             {/* 1. Relative Container for the "Stack" */}
             <div className="relative inline-block max-w-[90vw] md:max-w-[776px] mx-auto leading-[1.1] text-center overflow-visible h-fit">
               {/* 2. The Real Heading (Visible Gradient) */}
-              <h1
-                className="hero-heading text-[1.75rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] relative text-[#fff]"
-                style={
-                  {
-                    // background: '#ffffff',
-                    // backgroundImage: 'linear-gradient(160deg, #ffffff 0%, #f7f7f7 35%, #dedede 50%, #b5b5b5 100%)',
-                    // // textShadow: '0 0 45px white',
-                    // backgroundClip: 'text',
-                    // WebkitBackgroundClip: 'text',
-                    // WebkitTextFillColor: 'transparent',
-                    // WebkitBoxDecorationBreak: 'clone',
-                    // boxDecorationBreak: 'clone',
-                  }
-                }>
+              <h1 className="hero-heading text-[1.5rem] sm:text-[3.5rem] md:text-[3rem] -tracking-[.5px] pb-[0.25em] -mb-[0.25em] relative text-[#fff]">
                 <HeadingContent />
               </h1>
             </div>
@@ -93,7 +85,7 @@ const Hero = async () => {
           </RevealAnimation>
           <RevealAnimation delay={0.5} offset={10}>
             <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[12px] md:text-[14px]">
-              Step onto our pristine courses and feel instantly immersed in the lush surroundings.{' '}
+              Step onto our pristine course and feel instantly immersed in the beautiful Oklahoma surroundings.{' '}
               <span className="max-md:hidden">
                 With rolling terrain, natural obstacles, and sparkling water features, every visit offers a round of
                 memorable and engaging golf.
@@ -101,34 +93,6 @@ const Hero = async () => {
             </p>
           </RevealAnimation>
         </div>
-        {/* <ul className="flex items-center gap-4 justify-center md:flex-row flex-col mt-10">
-          <RevealAnimation delay={0.6} direction="left" offset={50}>
-            <li className="w-full sm:w-auto text-center sm:text-left">
-              <LinkButton
-                href="/book-tee-time"
-                className="btn hover:btn-secondary text-center border-0 btn-green btn-xl md:w-auto w-[90%] realistic-shadow-md hover:realistic-shadow-light hover:text-ns-green">
-                Book Tee Time
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-          <RevealAnimation delay={0.7} direction="left" offset={50}>
-            <li className="w-full sm:w-auto text-center sm:text-left">
-              <LinkButton
-                href="/events"
-                className="unique-class btn btn-dark hover:btn-green hover:border-0 text-center btn-xl md:w-auto w-[90%] text-ns-green realistic-shadow-md hover:realistic-shadow-light bg-[#1a1a1c]">
-                Events at Bushwood
-              </LinkButton>
-            </li>
-          </RevealAnimation>
-        </ul> */}
-        {/* <RevealAnimation delay={0.8} instant>
-          <div className="lg:mt-[100px] mt-[50px]">
-            <figure className="xl:max-w-[1240px] lg:max-w-[900px] max-w-[700px] mx-auto rounded-2xl overflow-hidden">
-              <Image src={heroImg} className="w-full h-full object-cover " alt="Forex trading" />
-              <Image src={heroDarkImg} className="w-full h-full object-cover hidden " alt="Forex trading" />
-            </figure>
-          </div>
-        </RevealAnimation> */}
       </div>
     </section>
   );
