@@ -5,34 +5,15 @@ Font base styles
 /* Small-cap heading fonts under evaluation for h1/h2/h3 — swap the classname
    used below in @layer base to try each one. Not decided yet, so all three
    stay declared here rather than committing to one. */
-@font-face {
-  font-family: 'CormorantSC-Regular';
-  src: url('/fonts/CormorantSC-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'CormorantSC-Medium';
-  src: url('/fonts/CormorantSC-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+
 @font-face {
   font-family: 'TrajanPro-Regular';
-  src: url('/fonts/TrajanPro-Regular.ttf') format('truetype');
+  src: url('/fonts/TrajanPro-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-@utility comorant {
-  font-family: 'CormorantSC-Regular', serif;
-}
-@utility comorant-med {
-  font-family: 'CormorantSC-Medium', serif;
-}
 @utility trajan {
   font-family: 'TrajanPro-Regular', serif;
 }

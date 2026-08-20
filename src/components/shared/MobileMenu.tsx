@@ -64,7 +64,7 @@ const MobileMenu = () => {
       const tween = gsap.fromTo(
         targets,
         { opacity: 0, y: 1 },
-        { opacity: 1, y: 0, duration: 0.3, stagger: 0.07, delay: 0.15, ease: 'power2.out' },
+        { opacity: 1, y: 0, duration: 0.75, stagger: 0.05, delay: 0.15, ease: 'power2.out' },
       );
       return () => { tween.kill(); };
     } else {
