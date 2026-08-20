@@ -23,12 +23,14 @@ export default defineConfig({
           structure: deskStructure,
         }),
         visionTool(),
+        media(),
       ]
     : [
         structureTool({
           title: 'Content',
           structure: deskStructure,
         }),
+        media(),
       ],
 
   releases: {

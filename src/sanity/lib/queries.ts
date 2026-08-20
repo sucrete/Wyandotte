@@ -63,3 +63,13 @@ export const MENU_QUERY = defineQuery(`{
   "grabAndGo": *[_id == "menu-grab-and-go"][0] { title, description, items },
   "drinks": *[_id == "menu-drinks"][0] { title, description, items }
 }`)
+
+
+export const GALLERY_QUERY = defineQuery(`*[_id == "gallery"][0] {
+  images[] {
+    asset-> {
+      url,
+      metadata { dimensions { width, height } }
+    }
+  }
+}`)

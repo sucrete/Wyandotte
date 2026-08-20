@@ -13,7 +13,7 @@ import { Metadata } from 'next';
 import { Fragment } from 'react';
 
 import { sanityFetch } from '@/sanity/lib/live';
-import { EVENTS_QUERY } from '@/sanity/lib/queries';
+import { EVENTS_QUERY, GALLERY_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const Home = async () => {
   const { data: eventsData } = await sanityFetch({ query: EVENTS_QUERY });
+  const { data: galleryData } = await sanityFetch({ query: GALLERY_QUERY });
 
   return (
     <Fragment>
@@ -30,7 +31,7 @@ const Home = async () => {
         <Links />
         <CourseIntro />
         <EventsPreview eventsData={eventsData} />
-        <Gallery />
+        <Gallery galleryData={galleryData} />
 
         {/* <NewsletterSignup inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent" /> */}
       </main>

@@ -1,7 +1,7 @@
 'use client';
 
-import Image from 'next/image';
-import { useCallback, useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import { useCallback, useMemo, useState } from 'react';
 import Masonry from 'react-masonry-css';
 import RevealAnimation from '../animation/RevealAnimation';
 import Lightbox from './Lightbox';
@@ -18,7 +18,9 @@ import unnamed from '@public/images/peoria-ridge/gallery/unnamed.webp';
 import unnamed2 from '@public/images/peoria-ridge/gallery/unnamed-2.webp';
 import wyandotteVert from '@public/images/peoria-ridge/gallery/wyandotte-vert.jpg';
 
-const galleryImages = [fr4, shot8, fr7, unnamed2, fr8, gorg, fr1, pin, unnamed, wyandotteVert];
+// Fallback set — shown only when the Studio's Gallery document has no images
+// uploaded yet.
+const fallbackImages = [fr4, shot8, fr7, unnamed2, fr8, gorg, fr1, pin, unnamed, wyandotteVert];
 
 const breakpointColumns = {
   default: 4,
@@ -27,15 +29,43 @@ const breakpointColumns = {
   500: 1,
 };
 
-const Gallery = () => {
+interface GalleryData {
+  images?: {
+    asset?: {
+      url?: string;
+      metadata?: { dimensions?: { width?: number; height?: number } };
+    };
+  }[];
+}
+
+interface GalleryProps {
+  galleryData?: GalleryData | null;
+}
+
+const Gallery = ({ galleryData }: GalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const handleNavigate = useCallback((direction: -1 | 1) => {
-    setSelectedIndex((current) => {
-      if (current === null) return current;
-      return (current + direction + galleryImages.length) % galleryImages.length;
-    });
-  }, []);
+  const galleryImages = useMemo<StaticImageData[]>(() => {
+    const studioImages = (galleryData?.images ?? [])
+      .filter((image) => image.asset?.url && image.asset?.metadata?.dimensions?.width && image.asset?.metadata?.dimensions?.height)
+      .map((image) => ({
+        src: image.asset!.url!,
+        width: image.asset!.metadata!.dimensions!.width!,
+        height: image.asset!.metadata!.dimensions!.height!,
+      }));
+
+    return studioImages.length > 0 ? studioImages : fallbackImages;
+  }, [galleryData]);
+
+  const handleNavigate = useCallback(
+    (direction: -1 | 1) => {
+      setSelectedIndex((current) => {
+        if (current === null) return current;
+        return (current + direction + galleryImages.length) % galleryImages.length;
+      });
+    },
+    [galleryImages.length],
+  );
 
   return (
     <section className="relative py-16 md:py-20 lg:py-[200px] bg-[#ffffff] overflow-hidden border-t border-[#f2f2f2]">

@@ -6,6 +6,7 @@ import tickerType from './tickerType';
 import eventType from './eventType';
 import membershipsType from './membershipsType';
 import menuSectionType from './menuSectionType';
+import galleryType from './galleryType';
 
 // OBJECTS
 import golfPass from './objects/golfPass';
@@ -25,6 +26,7 @@ export const schemaTypes: SchemaTypeDefinition[] = [
   eventType,
   membershipsType,
   menuSectionType,
+  galleryType,
   // Objects
   golfPass,
   miscRates,

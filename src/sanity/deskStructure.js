@@ -1,29 +1,38 @@
 // ./deskStructure.js
-import { RateseIcon, MembershipIcon, NewsIcon, NoticeIcon, EventIcon, HotDogIcon } from "./icons/icons";
-import { Utensils, Sandwich, Salad, BottleWine } from 'lucide-react';
+import { RateseIcon, MembershipIcon, NewsIcon, NoticeIcon, EventIcon, HotDogIcon } from './icons/icons';
+import { Utensils, Sandwich, Salad, BottleWine, Image as GalleryIcon } from 'lucide-react';
+import { ThListIcon } from '@sanity/icons';
+import { createBulkActionsTable } from 'sanity-plugin-bulk-actions-table';
 
-export const deskStructure = (S) =>
+export const deskStructure = (S, context) =>
   S.list()
     .title('Website')
     .id('website')
     .items([
       ...S.documentTypeListItems().filter(
-        (listItem) => !['rates', 'ticker', 'events', 'memberships', 'menuSection'].includes(listItem.getId()),
+        (listItem) =>
+          !['rates', 'ticker', 'events', 'memberships', 'menuSection', 'gallery', 'media.tag'].includes(
+            listItem.getId(),
+          ),
       ),
 
       S.listItem()
+        .id('events')
         .icon(EventIcon)
         .title('Events')
-        .child(S.documentTypeList('events').title('Events')),
-      // S.listItem()
-      //   .icon(NewsIcon)
-      //   .title('News')
-      //   .child(S.documentTypeList('news').title('News Items')),
-      // ⬇⬇⬇ singlet structure ⬇⬇⬇
-      // S.listItem()
-      //   .icon(RateseIcon)
-      //   .title('Greens Fees')
-      //   .child(S.document().schemaType('rates').documentId('rates').title('Greens Fees')),
+        .child(
+          S.list()
+            .title('Events')
+            .items([
+              S.listItem()
+                .id('events-list')
+                .icon(EventIcon)
+                .title('Events')
+                .child(S.documentTypeList('events').title('Events')),
+              createBulkActionsTable({ type: 'events', S, context, title: 'Manage', icon: ThListIcon }),
+            ]),
+        ),
+
       S.listItem()
         .icon(MembershipIcon)
         .title('Memberships')
@@ -53,6 +62,10 @@ export const deskStructure = (S) =>
                 .child(S.document().schemaType('menuSection').documentId('menu-drinks').title('Drinks')),
             ]),
         ),
+      S.listItem()
+        .icon(GalleryIcon)
+        .title('Gallery')
+        .child(S.document().schemaType('gallery').documentId('gallery').title('Gallery')),
       S.divider(),
       S.listItem()
         .icon(NoticeIcon)
