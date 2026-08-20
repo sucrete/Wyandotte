@@ -29,7 +29,7 @@ const Hero = async () => {
       />
       <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30 md:opacity-50"></div>
       <div className="absolute left-1/2 -bottom-7 -translate-x-1/2 -translate-y-1/2 md:hidden">
-        <Image className="animated-arrow opacity-50" src={FancyArrow} width={15} height={75} alt="" />
+        <Image className="animated-arrow" src={FancyArrow} width={15} height={75} alt="" />
       </div>
       {/* <div className="facebook-link absolute left-6 md:left-[13rem] bottom-[3rem] md:bottom-10 hidden md:block w-fit">
         <RevealAnimation delay={0.3} direction="left" offset={5} instant>

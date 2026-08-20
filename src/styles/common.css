@@ -792,17 +792,21 @@ Common Styles all over the sites
 .animated-arrow {
   @apply transition-transform;
   animation: arrow-animation 5s ease-in-out infinite;
+  opacity: .8;
 }
 
 @keyframes arrow-animation {
   from {
     transform: translateY(0);
+    opacity: .8;
   }
   50% {
     transform: translateY(-10px);
+    opacity: .3;
   }
   to {
     transform: translateY(0);
+    opacity: .8;
   }
 }
 
