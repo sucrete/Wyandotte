@@ -13,6 +13,7 @@
     "postinstall": "tsx folder-rename.ts --utb"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fullcalendar/core": "^6.1.20",
     "@fullcalendar/daygrid": "^6.1.20",
     "@fullcalendar/react": "^6.1.20",

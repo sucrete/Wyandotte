@@ -1,23 +1,34 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
+
+const TEMPLATE_IDS: Record<string, string | undefined> = {
+  contact: process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID,
+  'membership-inquiry': process.env.NEXT_PUBLIC_EMAILJS_MEMBERSHIP_TEMPLATE_ID,
+};
 
 export function useFormSubmit(formType: string) {
   const [status, setStatus] = useState<SubmitStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
   const submit = async (fields: Record<string, string>) => {
+    const templateId = TEMPLATE_IDS[formType];
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!templateId || !serviceId || !publicKey) {
+      setStatus('error');
+      setErrorMessage('Something went wrong sending that. Please try again, or call us directly.');
+      return;
+    }
+
     setStatus('submitting');
     setErrorMessage('');
     try {
-      const res = await fetch('/api/forms/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ formType, ...fields }),
-      });
-      if (!res.ok) throw new Error('Request failed');
+      await emailjs.send(serviceId, templateId, fields, { publicKey });
       setStatus('success');
     } catch {
       setStatus('error');

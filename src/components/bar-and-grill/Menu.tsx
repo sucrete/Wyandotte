@@ -57,9 +57,9 @@ const Menu = ({ menuData }: MenuProps) => {
             <div className="border w-full h-full border-fr-primary-800/15"></div>
           </div>
         </div>
-        <div className="copy w-[900px] max-w-full pt-[2rem] md:pt-[7rem] lg:pt-[10rem] md:-mt-[9rem] relative z-20 px-2 md:px-0">
+        <div className="copy w-[900px] max-w-full mt-[2rem] md:mt-[2rem] relative z-20 px-2 md:px-0">
           <RevealAnimation delay={0.1} offset={10}>
-            <h2 className="pb-6 md:text-4xl text-center px-8 md:px-0">Bar & Grill Menu</h2>
+            <h2 className="pb-9 md:text-4xl text-center px-8 md:px-0">Bar & Grill Menu</h2>
           </RevealAnimation>
           <div className="intro-wrapper mx-auto max-w-full flex flex-col gap-5 pb-14 ">
             <RevealAnimation delay={0.2} offset={10}>

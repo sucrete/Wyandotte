@@ -12,7 +12,7 @@ const GolfCourse = () => {
             <div className="border w-full h-full border-fr-primary-800/15"></div>
           </div>
         </div>
-        <div className="copy w-[650px] max-w-full mt-[1rem] md:mt-[0.25rem] relative z-20 px-10 md:px-0">
+        <div className="copy w-[650px] max-w-full mt-[1rem] relative z-20 px-10 md:px-0">
           <RevealAnimation delay={0.1} offset={10}>
             <FireIcon className="w-8 h-auto fill-fr-primary-600 pb-7" />
           </RevealAnimation>
