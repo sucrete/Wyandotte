@@ -19,11 +19,11 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
   return (
     <footer
       className={cn(
-        'bg-[#00251e] relative h-auto xl:h-[600px] bg-[radial-gradient(ellipse_400%_120%_at_40%_0%,#330000,#110000)]',
+        'bg-[#00251e] relative h-auto lg:h-[600px] pb-[3rem] md:pb-0 bg-[radial-gradient(ellipse_400%_120%_at_40%_0%,#330000,#110000)]',
         className,
       )}>
       <div className="main-container">
-        <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-15 md:gap-y-16 pt-16 pb-12 xl:pt-[6rem]">
+        <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-10 md:gap-y-16 pt-16 pb-12 xl:pt-[6rem]">
           <div className="col-span-12 xl:col-span-4">
             <RevealAnimation delay={0.3}>
               <div className="max-w-[306px] flex flex-col items-center mx-auto xl:mx-0">
@@ -32,7 +32,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                     <FireRidgeLogoFull />
                   </figure>
                 </Link>
-                <div className="flex items-center gap-3 mt-5">
+                {/* <div className="flex items-center gap-3 mt-5">
                   <Link
                     target="_blank"
                     href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
@@ -45,7 +45,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                     <span className="sr-only">Instagram</span>
                     <Image className="size-6" src={instagram} alt="Instagram" />
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="flex items-center gap-3 mt-2"></div>
                 {/* <p className="text-accent/60 text-tagline-1 mt-4 text-center">
@@ -71,7 +71,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
               </div>
             </RevealAnimation>
           </div>
-          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-16 md:gap-y-8 xl:col-span-8">
+          <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-10 md:gap-y-8 xl:col-span-8">
             <div className="col-span-12 md:col-span-4">
               <RevealAnimation delay={0.4}>
                 <div className="space-y-5 flex flex-col items-center md:items-start">
@@ -123,7 +123,10 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 </div>
               </RevealAnimation>
 
-              <div className="flex flex-col space-y-3 text-center md:text-right pt-[3rem]">
+              <div className="flex flex-col space-y-3 text-center md:text-right items-center md:items-end pt-[2.75rem] md:pt-[1.25rem]">
+                <RevealAnimation delay={.6} offset={10}>
+                  <Image className='w-[150px] md:w-[200px] h-auto' src='/images/peoria-ridge/WTOK-logo-white.png' width={150} height={50} alt=''/>
+                </RevealAnimation>
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
                   <Link href="/studio" className="" target="_blank">
                     <p className="text-tagline-1 text-accent/60">
