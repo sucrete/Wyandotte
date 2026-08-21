@@ -15,6 +15,11 @@ import { Fragment } from 'react';
 import { sanityFetch } from '@/sanity/lib/live';
 import { EVENTS_QUERY, GALLERY_QUERY } from '@/sanity/lib/queries';
 
+// Forces a fresh Sanity fetch on every request — ISR left a window where a
+// just-unpublished event could still render after ISR's on-demand revalidation
+// hadn't finished propagating across every edge node.
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Fire Ridge Golf Course | A scenic golf destination in Miami, OK.',

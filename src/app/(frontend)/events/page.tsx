@@ -9,6 +9,9 @@ import { Fragment } from 'react';
 import { sanityFetch } from '@/sanity/lib/live';
 import { EVENTS_QUERY } from '@/sanity/lib/queries';
 
+// Forces a fresh Sanity fetch on every request — see (frontend)/page.tsx for why.
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   ...defaultMetadata,
   title: 'Events | Fire Ridge Golf Course',
