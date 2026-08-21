@@ -6,6 +6,7 @@ import LinkButton from '../ui/button/LinkButton';
 import Image from 'next/image';
 import { cn } from '@/utils/cn';
 import { withProtocol } from '@/utils/url';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // e.g. "1" -> "st", "2" -> "nd", "3" -> "rd", "4"-"20" -> "th", then repeats.
 const getOrdinalSuffix = (day) => {
@@ -77,6 +78,15 @@ const EventsPreview = ({ eventsData }) => {
     );
     setHasChecked(true);
   }, [eventsData]);
+
+  // This section renders full-sized on first paint (hasChecked is still
+  // false) and only collapses to null after the effect above resolves —
+  // that late collapse changes the document height without anyone telling
+  // ScrollTrigger, leaving every trigger below this section pinned to
+  // stale (taller) positions. Refresh once the layout has settled.
+  useEffect(() => {
+    if (hasChecked) ScrollTrigger.refresh();
+  }, [hasChecked]);
 
   if (hasChecked && upcomingEvents.length === 0) return null;
 
