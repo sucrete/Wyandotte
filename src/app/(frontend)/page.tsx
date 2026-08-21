@@ -17,7 +17,7 @@ import { EVENTS_QUERY, GALLERY_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Fire Ridge Golf Course | A scenic golf destination in Cottage Grove, OR.',
+  title: 'Fire Ridge Golf Course | A scenic golf destination in Miami, OK.',
 };
 
 const Home = async () => {

@@ -11,7 +11,7 @@ import LessonInfo from '@/components/lessons/LessonInfo';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Golf Lessons | Fire Ridge Golf Course in Cottage Grove, OR',
+  title: 'Golf Lessons | Fire Ridge Golf Course in Miami, OK',
 };
 
 const GreensFees = () => {

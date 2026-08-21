@@ -17,7 +17,7 @@ import { RATES_QUERY } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Greens Fees | Fire Ridge Golf Course in Cottage Grove, OR',
+  title: 'Greens Fees | Fire Ridge Golf Course in Miami, OK',
 };
 
 const GreensFees = async () => {

@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Book Tee Time | Reserve your round at Fire Ridge Golf Course in Cottage Grove, OR.',
+  title: 'Book Tee Time | Reserve your round at Fire Ridge Golf Course in Miami, OK.',
 };
 
 const BookTeeTime = () => {

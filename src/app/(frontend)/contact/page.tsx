@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Contact Us | Fire Ridge Golf Course in Cottage Grove, OR',
+  title: 'Contact Us | Fire Ridge Golf Course in Miami, OK',
 };
 
 const Contact = () => {
