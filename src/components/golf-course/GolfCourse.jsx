@@ -28,7 +28,7 @@ const GolfCourse = () => {
               </p>
               <p>
                 Nestled amidst the serene landscapes of Northeast Oklahoma, Fire Ridge Golf Course is a Par 72, 18 hole
-                championship golf course owned by the Peoria Indian Tribe of Oklahoma and designed by renowned architect
+                championship golf course owned by the Wyandotte Tribe of Oklahoma and designed by renowned architect
                 Bland Pittman.
               </p>
               <p>
