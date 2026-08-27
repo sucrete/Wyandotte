@@ -29,12 +29,12 @@ const BookingEngine = () => {
   return (
     <section>
       <div className="main-container py-[2rem] md:py-[10rem] ">
-        <div className="max-w-[538px] mx-auto rounded-2xl mb-[2rem] p-8 bg-[#00000006] border border-[#3b3a3a0c]">
-          <h6 className=" text-black pb-4">Course Rules</h6>
+        <div className="max-w-[538px] mx-auto rounded-2xl mb-[2rem] py-6 pr-8 pl-10 bg-[#00000006] border border-[#3b3a3a0c]">
+          <h6 className=" text-black pb-4 text-[18px] area-600">Course Rules</h6>
           {Rules.map((item) => (
             <div key={item.id} className="justify-between text-[#00000074] mb-2">
               <p className="text-[12px] leading-3.5 ">
-                <span className="monospaced">{item.id}.</span>
+                <span className="">{item.id}. </span>
                 {item.rule}
               </p>
             </div>
