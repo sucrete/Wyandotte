@@ -32,7 +32,7 @@ const BookingEngine = () => {
         <RevealAnimation delay={0.3} offset={40}>
           <div className="max-w-[538px] mx-auto rounded-2xl mb-[2rem] py-6 pr-8 pl-8 bg-[#00000006] border border-[#3b3a3a0c] overflow-hidden relative">
             <div className="absolute w-[20px] h-[80%] bg-[#3b3a3a16] top-1/2 -translate-y-1/2 -translate-x-[48px] rounded-r-[5px]"></div>
-            <h6 className=" text-black pb-4 text-[18px] area-600">Course Rules</h6>
+            <h6 className=" text-black pb-3 text-[18px] area-600">Course Rules</h6>
             {Rules.map((item) => (
               <div key={item.id} className="justify-between text-[#00000074] mb-2">
                 <p className="text-[12px] leading-3.5 ">
