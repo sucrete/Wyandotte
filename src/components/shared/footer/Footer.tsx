@@ -1,6 +1,7 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import { cn } from '@/utils/cn';
 import { Logo, FireRidgeLogoFull } from '@/components/svg-components/Logos';
+
 import facebook from '@public/images/icons/facebook.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import Image from 'next/image';
@@ -32,25 +33,8 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                     <FireRidgeLogoFull />
                   </figure>
                 </Link>
-                {/* <div className="flex items-center gap-3 mt-5">
-                  <Link
-                    target="_blank"
-                    href="https://www.facebook.com/PeoriaRidgeGolfCourse/#"
-                    className="footer-social-link">
-                    <span className="sr-only">Facebook</span>
-                    <Image className="size-6" src={facebook} alt="Facebook" />
-                  </Link>
-                  <div className="bg-stroke-1/25 h-6 w-px"></div>
-                  <Link target="_blank" href="https://www.instagram.com/peoriaridgegc/" className="footer-social-link">
-                    <span className="sr-only">Instagram</span>
-                    <Image className="size-6" src={instagram} alt="Instagram" />
-                  </Link>
-                </div> */}
 
                 <div className="flex items-center gap-3 mt-2"></div>
-                {/* <p className="text-accent/60 text-tagline-1 mt-4 text-center">
-                  Pro Shop Hours: 7:30am - 9pm, Clubhouse Hours: 8:00am - 9:00pm
-                </p> */}
 
                 <div className=" flex flex-col text-center">
                   <Link
@@ -77,11 +61,6 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                 <div className="space-y-5 flex flex-col items-center md:items-start">
                   <p className=" text-tagline-1 text-accent/60 ">Pages</p>
                   <ul className="space-y-0 sm:space-y-1 text-center md:text-left">
-                    {/* <li>
-                      <Link href="/greens-fees" className="footer-link">
-                        Greens Fees
-                      </Link>
-                    </li> */}
                     <li>
                       <Link href="/memberships" className="footer-link">
                         Memberships
@@ -124,9 +103,34 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
               </RevealAnimation>
 
               <div className="flex flex-col space-y-3 text-center md:text-right items-center md:items-end pt-[2.75rem] md:pt-[1.25rem]">
-                <RevealAnimation delay={.6} offset={10}>
-                  <Image className='w-[150px] md:w-[200px] h-auto' src='/images/peoria-ridge/WTOK-logo-white.png' width={150} height={50} alt=''/>
-                </RevealAnimation>
+                <div className="flex flex-row justify-center gap-5">
+                  <RevealAnimation className="flex flex-col justify-center" delay={0.6} offset={10}>
+                    <a href="https://wyandotte-nation.org/" target="_blank">
+                      <Image
+                        className="w-[140px] h-auto"
+                        src="/images/peoria-ridge/wyandotte-nation.png"
+                        width={150}
+                        height={50}
+                        alt=""
+                      />
+                    </a>
+                  </RevealAnimation>
+                  <RevealAnimation instant offset={10}>
+                    <div className="h-full border-l border-[#ffffff19]"></div>
+                  </RevealAnimation>
+                  <RevealAnimation delay={0.6} offset={10}>
+                    <a href="https://www.wtok.org/" target="_blank">
+                      <Image
+                        className="w-[150px] h-auto"
+                        src="/images/peoria-ridge/WTOK_Logo_White.png"
+                        width={150}
+                        height={50}
+                        alt=""
+                      />
+                    </a>
+                  </RevealAnimation>
+                </div>
+
                 <RevealAnimation delay={0.7} offset={5} start="top 105%">
                   <Link href="/studio" className="" target="_blank">
                     <p className="text-tagline-1 text-accent/60">
@@ -145,13 +149,6 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
             </div>
           </div>
         </div>
-        {/* <div className="relative pt-[35px] pb-[100px] text-center">
-          <RevealAnimation delay={0.7} offset={5} duration={2}>
-            <div>
-              <Logo className="fill-[#012d25]" markClassName="fill-[#012d25]" />
-            </div>
-          </RevealAnimation>
-        </div> */}
       </div>
     </footer>
   );

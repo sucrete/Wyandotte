@@ -45,7 +45,6 @@ const MembershipsSection = ({ membershipsData }) => {
             const description = data[`${prefix}Description`];
             const monthly = data[`${prefix}Monthly`];
             const yearly = data[`${prefix}Yearly`];
-            // const pdfUrl = data[`${prefix}Pdf`]?.asset?.url;
 
             return (
               <RevealAnimation
@@ -60,7 +59,6 @@ const MembershipsSection = ({ membershipsData }) => {
                   {/* <div className="pointer-events-none absolute inset-0 z-10 rounded-[20px] shadow-[inset_0_0_0_1px_oklab(0.93_0_0/0.35)]" /> */}
                   {/* Gradient only visible on hover — cue taken from HeroUI's card component */}
                   <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-br from-fr-primary-800/15 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
                   <div className="relative h-[175px] w-full shrink-0 image-section">
                     <Image src={TIER_IMAGES[prefix]} alt="" fill className="object-cover" />
                     {/* Eases the image into the white card body below it, rather than a hard edge */}

@@ -22,6 +22,7 @@ const BookTeeTime = () => {
           imageOffset="-17%"
           imageHeight="170%"
           overlayOpacity=".35"
+          heroText='Book Tee Time'
         />
         <BookingEngine />
         {/* <NewsletterSignup className='bg-white' inputFieldClass="placeholder:text-black/70 focus:border-black bg-accent" /> */}
