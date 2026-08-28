@@ -27,7 +27,7 @@ const Hero = async () => {
         offset="-12%"
         sizes="(max-width: 768px) 200vw, 100vw"
       />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30 md:opacity-50"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30"></div>
       <div className="absolute left-1/2 -bottom-7 -translate-x-1/2 -translate-y-1/2 md:hidden">
         <Image className="animated-arrow" src={FancyArrow} width={15} height={75} alt="" />
       </div>

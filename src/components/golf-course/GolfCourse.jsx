@@ -13,12 +13,12 @@ const GolfCourse = () => {
             <div className="border w-full h-full border-fr-primary-800/15"></div>
           </div>
         </div>
-        <div className="copy w-[650px] max-w-full mt-[1rem] relative z-20 px-6 md:px-0">
+        <div className="copy w-[650px] max-w-full mt-[2rem] md:mt-[1rem] relative z-20 px-6 md:px-0">
           <RevealAnimation delay={0.1} offset={10}>
             <FireIcon className="w-8 h-auto fill-fr-primary-600 pb-7" />
           </RevealAnimation>
           <RevealAnimation delay={0.2} offset={20}>
-            <h2 className="pb-5 md:text-4xl md:w-1/2 -ml-0.5">The Story of Fire Ridge Golf Course</h2>
+            <h2 className="pb-5 text-[25px] max-md:leading-7 md:text-4xl md:w-1/2 -ml-0.5">The Story of Fire Ridge Golf Course</h2>
           </RevealAnimation>
 
           <RevealAnimation delay={0.3}>
@@ -40,7 +40,7 @@ const GolfCourse = () => {
                 <a
                   href="https://wyandotte-nation.org/wyandotteagrees-to-purchase-peoria-ridge-golf-course/"
                   target="_blank">
-                  <h6 className="leading-6.5 capitalize text-[19px] area-500 underline underline-offset-3 decoration-fr-primary-800/10 hover:decoration-fr-primary-800">
+                  <h6 className="md:leading-6.5 capitalize text-[17px] md:text-[19px] area-500 underline underline-offset-3 decoration-fr-primary-800/10 hover:decoration-fr-primary-800">
                     "Wyandotte Nation agrees to purchase <br className='max-md:hidden'/> Peoria Ridge Golf Course"
                   </h6>
                 </a>
