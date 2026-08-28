@@ -26,7 +26,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
       <div className="main-container">
         <div className="grid grid-cols-12 justify-between gap-x-0 gap-y-10 md:gap-y-16 pt-16 pb-12 xl:pt-[6rem]">
           <div className="col-span-12 xl:col-span-4">
-            <RevealAnimation delay={0.3}>
+            <RevealAnimation delay={0.3} offset={30}>
               <div className="max-w-[306px] flex flex-col items-center mx-auto xl:mx-0">
                 <Link href="/">
                   <figure className="max-w-[175px] mt-[5px]">
@@ -57,7 +57,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
           </div>
           <div className="col-span-12 grid grid-cols-12 gap-x-0 gap-y-10 md:gap-y-8 xl:col-span-8">
             <div className="col-span-12 md:col-span-4">
-              <RevealAnimation delay={0.4}>
+              <RevealAnimation delay={0.4} offset={40}>
                 <div className="space-y-5 flex flex-col items-center md:items-start">
                   <p className=" text-tagline-1 text-accent/60 ">Pages</p>
                   <ul className="space-y-0 sm:space-y-1 text-center md:text-left">
@@ -96,7 +96,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
               </RevealAnimation>
             </div>
             <div className="col-span-12 md:col-span-8">
-              <RevealAnimation delay={0.5}>
+              <RevealAnimation delay={0.5} offset={30}>
                 <div>
                   <WeatherModule />
                 </div>
@@ -104,7 +104,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
 
               <div className="flex flex-col space-y-3 text-center md:text-right items-center md:items-end pt-[2.75rem] md:pt-[1.25rem]">
                 <div className="flex flex-row justify-center gap-5">
-                  <RevealAnimation className="flex flex-col justify-center" delay={0.6} offset={10}>
+                  <RevealAnimation className="flex flex-col justify-center" delay={0.6} offset={25}>
                     <a href="https://wyandotte-nation.org/" target="_blank">
                       <Image
                         className="w-[140px] h-auto"
@@ -115,10 +115,10 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                       />
                     </a>
                   </RevealAnimation>
-                  <RevealAnimation instant offset={10}>
+                  <RevealAnimation delay={.65} offset={25}>
                     <div className="h-full border-l border-[#ffffff19]"></div>
                   </RevealAnimation>
-                  <RevealAnimation delay={0.6} offset={10}>
+                  <RevealAnimation delay={0.7} offset={25}>
                     <a href="https://www.wtok.org/" target="_blank">
                       <Image
                         className="w-[150px] h-auto"
@@ -131,7 +131,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                   </RevealAnimation>
                 </div>
 
-                <RevealAnimation delay={0.7} offset={5} start="top 105%">
+                <RevealAnimation delay={0.8} offset={15} start="top 105%">
                   <Link href="/studio" className="" target="_blank">
                     <p className="text-tagline-1 text-accent/60">
                       Copyright Fire Ridge Golf Course © {new Date().getFullYear()}
@@ -139,7 +139,7 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                   </Link>
                 </RevealAnimation>
 
-                <RevealAnimation delay={0.75} offset={5} start="top 105%">
+                <RevealAnimation delay={0.9} offset={15} start="top 105%">
                   <div className="TQS-attribution-wrapper flex flex-row justify-center md:justify-end">
                     <TQSGears />
                     <p className="text-tagline-1 text-accent/60">Powered by TeeQuest</p>
