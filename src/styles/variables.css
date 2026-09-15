@@ -8,7 +8,9 @@ All the varaiables are added here
 @theme {
   /* =============== FONTS =============== */
   --font-body: 'area-variable', sans-serif;
-  --font-monospace: 'ibm-plex-mono', monospace;
+  /* Sweet Sans Pro is a sans, not a mono — the token/utility keep the
+     "monospace(d)" name only because it is referenced in ~18 places. */
+  --font-monospace: 'sweet-sans', sans-serif;
   /* =============== COLORS =============== */
   /* --color-fr-primary: #580001; */
   --color-taxi-cab: #ffd333;

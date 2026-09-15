@@ -24,7 +24,9 @@
   }
 }
 @utility monospaced {
-  @apply font-monospace uppercase text-[10px] md:text-[11px] font-[500] tracking-[0.15px] leading-[1];
+  /* 400, not 500: the Sweet Sans woff2 is Regular-only, so 500 would render as
+     a synthesized faux-bold rather than a real weight. */
+  @apply font-monospace uppercase text-[10px] md:text-[11px] font-[400] tracking-[0.15px] leading-[1];
 }
 .th-wrap,
 .th-head {

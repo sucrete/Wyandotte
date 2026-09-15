@@ -2,6 +2,7 @@
 
 import copse from '@public/images/peoria-ridge/sweet-man.jpg';
 import vertImage from '@public/images/peoria-ridge/usa-pin-flag.jpg';
+import { FireIcon } from '../svg-components/Logos';
 
 import Image from 'next/image';
 import { useRef } from 'react';
@@ -39,28 +40,26 @@ const CourseIntro = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-16">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-24 lg:items-center py-[50px] lg:py-[80px]">
           {/* Left — text */}
-          <div className="flex flex-col space-y-6">
-            <div className="flex flex-row">
+          <div className="flex flex-col">
+            <div className="flex flex-row pb-5 space-x-2">
               {/* <Image src={'/images/shared/three-marbles.svg'} className="pr-2" width={30} height={8} alt=""></Image> */}
-              <RevealAnimation delay={.6} direction="left" offset={10}>
-                <span className="green-circle size-[9px] bg-taxi-cab rounded-full inline-block mr-2"></span>
+              <RevealAnimation delay={0.6} direction="left" offset={10}>
+                <FireIcon className="w-6 h-auto fill-taxi-cab" />
               </RevealAnimation>
-              <RevealAnimation delay={.2} direction="left" offset={10}>
-                <span className="monospaced relative -top-[1px] text-[#949494]">About Us</span>
+              <RevealAnimation delay={0.2} direction="left" offset={5}>
+                <span className="monospaced relative -top-[1px] text-[#77363690]">About Us</span>
               </RevealAnimation>
             </div>
             <RevealAnimation delay={0.2} direction="left" offset={20}>
-              <h2
-                className="leading-[1.1] text-[2rem] md:text-[2.5rem] text-bushwood-
-              700">
+              <h2 className="leading-[1.1] text-fr-primary-700 pb-4">
                 A Rewarding Course From Tee One
               </h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3} direction="left" offset={20}>
               <div className="space-y-4">
                 <p className="text-primary/70">
-                  Nestled amidst the serene landscapes of Northeast Oklahoma, Fire Ridge offers an inviting 18-hole,
-                  Par 72 championship experience designed by renowned architect Bland Pittman. Five sets of tee boxes
+                  Nestled amidst the serene landscapes of Northeast Oklahoma, Fire Ridge offers an inviting 18-hole, Par
+                  72 championship experience designed by renowned architect Bland Pittman. Five sets of tee boxes
                   accommodate golfers of every skill level, ensuring both challenge and enjoyment.
                 </p>
                 <p className="text-primary/70">

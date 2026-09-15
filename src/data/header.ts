@@ -195,6 +195,12 @@ export const splitMenuRight: NavigationItem[] = [
     hasDropdown: false,
   },
   {
+    id: 'stay-and-play',
+    label: 'Stay & Play',
+    href: '/stay-and-play',
+    hasDropdown: false,
+  },
+  {
     id: 'contact',
     label: 'Contact',
     href: '/contact',

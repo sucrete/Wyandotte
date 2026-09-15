@@ -82,6 +82,11 @@ const FooterOne: FC<FooterOneProps> = ({ className }) => {
                       </Link>
                     </li>
                     <li>
+                      <Link href="/stay-and-play" className="footer-link">
+                        Stay & Play
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/contact" className="footer-link">
                         Contact
                       </Link>

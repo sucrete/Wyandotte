@@ -21,7 +21,7 @@ const BookTeeTime = () => {
           BGHeroSrc="/images/peoria-ridge/fire-ridge-5.webp"
           imageOffset="-17%"
           imageHeight="170%"
-          overlayOpacity=".35"
+          overlayOpacity=".65"
           heroText='Book Tee Time'
         />
         <BookingEngine />

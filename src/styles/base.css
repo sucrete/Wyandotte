@@ -14,6 +14,18 @@ Font base styles
   font-display: swap;
 }
 
+/* Sweet Sans Pro ships here as a single static Regular (usWeightClass 400) —
+   there is no medium/bold file, so anything asking for a heavier weight gets a
+   synthesized faux-bold. The `monospaced` utility is pinned to 400 for that
+   reason; see common.css. */
+@font-face {
+  font-family: 'sweet-sans';
+  src: url('/fonts/sweet-sans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @utility trajan {
   font-family: 'TrajanPro-Regular', serif;
 }

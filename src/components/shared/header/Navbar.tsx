@@ -56,7 +56,7 @@ const NavbarFour = ({ className, btnClassName, notices = [], tickerVisible = fal
             <div className="flex items-center gap-2">
               <NavCTAButton
                 href="/book-tee-time"
-                btnClassName={cn('btn-header-bushwood hover:btn-white-dark ', btnClassName)}
+                btnClassName={cn('btn-header-bushwood hover:btn-white-dark', btnClassName)}
                 label="Book Tee Time"
               />
               <MobileMenuButton className={cn(isScrolled ? 'py-4' : 'py-1')} isScrolled={isScrolled} />

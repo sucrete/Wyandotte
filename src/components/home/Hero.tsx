@@ -27,7 +27,7 @@ const Hero = async () => {
         offset="-12%"
         sizes="(max-width: 768px) 200vw, 100vw"
       />
-      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-30"></div>
+      <div className="top-0 left-0 absolute h-[100%] w-[100%] -z-1 bg-scrim-hero-darker opacity-70"></div>
       <div className="absolute left-1/2 -bottom-7 -translate-x-1/2 -translate-y-1/2 md:hidden">
         <Image className="animated-arrow" src={FancyArrow} width={15} height={75} alt="" />
       </div>
@@ -70,7 +70,7 @@ const Hero = async () => {
               </h1>
             </div>
           </RevealAnimation>
-          <RevealAnimation delay={0.3} offset={20}>
+          <RevealAnimation delay={0.2} offset={10}>
             <div className="flex flex-row gap-3 items-center max-w-[60vw] md:max-w-[476px] mx-auto">
               <div className="flex-auto">
                 <div className="border-t border-[#ffffff49] h-[1px] "></div>
@@ -83,7 +83,7 @@ const Hero = async () => {
               </div>
             </div>
           </RevealAnimation>
-          <RevealAnimation delay={0.5} offset={10}>
+          <RevealAnimation delay={0.3} offset={10}>
             <p className="initial-descriptiion lg:max-w-[600px] md:max-w-[600px] sm:max-w-[500px] max-w-[380px] mx-auto text-[#ffffffea] wna-text-shadow text-[12px] md:text-[14px]">
               Step onto our pristine course and feel instantly immersed in the beautiful Oklahoma surroundings.{' '}
               <span className="max-md:hidden">

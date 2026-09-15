@@ -6,6 +6,18 @@ body {
 
 }
 
+/* Default (unstyled) body text only — anything with its own explicit
+   text-[…] class is untouched. Scoped to md+ (768px) on purpose: below
+   that, default text keeps its normal size. Plain font-size, not a
+   rem-based Tailwind text-* utility, so it only changes what un-sized text
+   inherits — the html root font-size (what every rem-based utility like
+   spacing/text-base/radii resolves against) is left alone. */
+@media (min-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
 /* -------------------------
 area-variable modifiers.
 
