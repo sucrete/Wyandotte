@@ -33,7 +33,7 @@ const StayPlayDetails = () => {
                 </RevealAnimation>
               </div>
               <RevealAnimation delay={0.4} direction="right">
-                <h2>
+                <h2 className='text-[42px]'>
                   Wake up minutes <br />
                   from the first tee
                 </h2>
