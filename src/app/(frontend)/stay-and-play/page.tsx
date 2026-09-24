@@ -1,6 +1,8 @@
 import HalfHero from '@/components/ui/HalfHero';
-import StayPlayPromo from '@/components/stay-and-play/StayPlayPromo';
-import StayPlayDetails from '@/components/stay-and-play/StayPlayDetails';
+import StayPlayCasino from '@/components/stay-and-play/StayPlayCasino';
+import StayPlayHotel from '@/components/stay-and-play/StayPlayHotel';
+import StayPlayDining from '@/components/stay-and-play/StayPlayDining';
+import StayPlayCourse from '@/components/stay-and-play/StayPlayCourse';
 import Footer from '@/components/shared/footer/Footer';
 
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -17,14 +19,16 @@ const StayAndPlay = () => {
     <Fragment>
       <main>
         <HalfHero
-          BGHeroSrc="/images/peoria-ridge/fire-ridge-3.webp"
+          BGHeroSrc="/images/peoria-ridge/hotel/river-bend.webp"
           imageOffset="-15%"
-          imageHeight="140%"
-          overlayOpacity=".75"
+          imageHeight="130%"
+          overlayOpacity=".9"
           heroText="Stay & Play"
         />
-        <StayPlayDetails />
-        <StayPlayPromo />
+        <StayPlayCasino />
+        <StayPlayHotel />
+        <StayPlayDining />
+        {/* <StayPlayCourse /> */}
       </main>
       <Footer />
     </Fragment>

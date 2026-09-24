@@ -12,6 +12,16 @@
   } */
 }
 
+.inline-anchor {
+  @apply text-fr-primary-800 decoration-fr-primary-800/20 underline-offset-3 underline transition-colors hover:decoration-fr-primary-800/40;
+}
+.inline-anchor-light {
+  @apply text-accent decoration-accent/20 underline-offset-3 underline transition-colors hover:decoration-accent/40;
+}
+@utility drop-shadow-stacked {
+  @apply drop-shadow-[0_1px_1px_rgba(0,0,0,0.06),0_2px_2px_rgba(0,0,0,0.07),0_4px_4px_rgba(0,0,0,0.08),0_8px_8px_rgba(0,0,0,0.09),0_16px_16px_rgba(0,0,0,0.1),0_32px_32px_rgba(0,0,0,0.11)];
+}
+
 .bushwood-logo {
   @apply w-full;
   path {
