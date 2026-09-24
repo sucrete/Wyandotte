@@ -41,19 +41,19 @@ const StayPlayHotel = () => {
                 </RevealAnimation> */}
               </div>
               <RevealAnimation delay={0.2} direction="left">
-                <h2 className="text-[42px]">
+                <h2 className="text-[42px] max-md:text-[32px]">
                   Wake up minutes <br />
                   from the first tee
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3} direction="left">
-                <p className="text-black/70 text-[13px] md:text-[15px] pt-1 pb-2 max-w-[92%]">
+                <p className="text-black/70 text-[13px] md:text-[15px] pt-1 pb-2 max-w-[92%] max-md:max-w-none">
                   A vacation is closer than you think when you stay at River Bend Casino Hotel! From our chic and
                   luxurious hotel, to our action packed gaming floor and Club 60 West, it’s the perfect getaway for a
                   night of excitement! Discover the bliss of comfort and convenience when you book today!
                 </p>
               </RevealAnimation>
-              <ul className="inline-grid sm:grid-cols-2 gap-x-10 gap-y-2.5 text-left pb-11">
+              <ul className="inline-grid grid-cols-2 max-md:gap-x-4 gap-x-10 gap-y-2.5 text-left pb-11 max-md:pb-2">
                 {AMENITIES.map((item, index) => (
                   <RevealAnimation key={index} delay={0.3 + index * 0.05} direction="left" offset={35}>
                     <li key={item} className="flex items-start gap-3">

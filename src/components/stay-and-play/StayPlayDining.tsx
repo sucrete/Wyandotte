@@ -13,7 +13,7 @@ const StayPlayDining = () => {
         <div className="pb-[2rem]">
           <RevealAnimation className="items-center w-full" delay={0.1}>
             <Image
-              className="w-[350px] h-auto mx-auto"
+              className="w-[350px] max-md:w-[240px] h-auto mx-auto"
               src={TwinBridges}
               width={300}
               height={100}
@@ -38,7 +38,7 @@ const StayPlayDining = () => {
 
           <div className="col-span-12 lg:col-span-6">
             <div className="space-y-3">
-              <div className="flex flex-row pb-5 space-x-2">
+              <div className="flex flex-row pb-5 max-md:pb-2 space-x-2">
                 {/* <RevealAnimation delay={0.2} direction="right" offset={15}>
                   <FireIcon className="w-6 h-auto fill-taxi-cab" />
                 </RevealAnimation>
@@ -46,12 +46,12 @@ const StayPlayDining = () => {
                   <span className="monospaced relative -top-[1px] text-[#77363690]">Dining</span>
                 </RevealAnimation> */}
                 <RevealAnimation delay={0.25} direction="right">
-                  <h2 className="text-[42px]">Never leave hungry</h2>
+                  <h2 className="text-[42px] max-md:text-[32px]">Never leave hungry</h2>
                 </RevealAnimation>
               </div>
 
               <RevealAnimation delay={0.3} direction="right">
-                <p className="text-black/70 text-[13px] md:text-[15px] max-w-[92%] pl-[3px]">
+                <p className="text-black/70 text-[13px] md:text-[15px] max-w-[92%] max-md:max-w-none pl-[3px]">
                   Satisfy your appetite with any of our outstanding dining selections. Enjoy a more secluded dining
                   experience in{' '}
                   <a

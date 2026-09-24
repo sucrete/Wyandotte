@@ -24,7 +24,7 @@ const StayPlayCourse = () => {
 
           <div className="col-span-12 lg:col-span-6 ">
             <RevealAnimation delay={0.1} direction='right'>
-              <div className="shadow-lg/40 bg-[#5e0002] p-[4rem]">
+              <div className="shadow-lg/40 bg-[#5e0002] p-[4rem] max-md:p-[2rem]">
                 <div className="space-y-3">
                   <div className="flex flex-row pb-5 space-x-2">
                     <FireIcon className="w-6 h-auto fill-taxi-cab" />
@@ -32,7 +32,7 @@ const StayPlayCourse = () => {
                     <span className="monospaced relative -top-[1px] text-[#d7c3c390]">The Course</span>
                   </div>
 
-                  <h2 className="text-[42px] text-accent">
+                  <h2 className="text-[42px] max-md:text-[32px] text-accent">
                     Eighteen holes, <br />
                     worth the trip
                   </h2>

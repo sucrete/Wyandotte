@@ -19,17 +19,29 @@ const StayPlayCasino = () => {
   return (
     <section className="bg-[#5e0002] py-[4rem] md:py-[7rem] lg:py-[9rem] bg-[url('/images/shared/grid.svg')] bg-cover">
       <div className="main-container">
-        <div className="grid grid-cols-12 items-center max-lg:gap-y-[3rem] lg:gap-[5rem]">
+        <div className="grid grid-cols-12 items-center max-lg:gap-y-[3rem] max-md:gap-y-[2.5rem] lg:gap-[5rem]">
           <div className="col-span-12 lg:col-span-6 relative">
-            <div className="absolute w-fit h-fit -top-10 -left-[4rem] z-10">
+            <div className="absolute w-fit h-fit -top-10 -left-[4rem] max-md:-top-8 max-md:-left-[1rem] z-10">
               <RevealAnimation className="" delay={0.7} direction="left" offset={20}>
-                <Image className="w-[180px] h-auto drop-shadow-stacked" src={Dice} width={200} height={200} alt="" />
+                <Image
+                  className="w-[180px] max-md:w-[110px] h-auto drop-shadow-stacked"
+                  src={Dice}
+                  width={200}
+                  height={200}
+                  alt=""
+                />
               </RevealAnimation>
             </div>
 
-            <div className="absolute w-fit h-fit -bottom-[4.5rem] -right-[4rem] z-10">
+            <div className="absolute w-fit h-fit -bottom-[4.5rem] -right-[4rem] max-md:-bottom-[2.5rem] max-md:-right-[1rem] z-10">
               <RevealAnimation className="" delay={0.1} direction="right" offset={20}>
-                <Image className="w-[220px] h-auto drop-shadow-stacked" src={Chips} width={200} height={200} alt="" />
+                <Image
+                  className="w-[220px] max-md:w-[130px] h-auto drop-shadow-stacked"
+                  src={Chips}
+                  width={200}
+                  height={200}
+                  alt=""
+                />
               </RevealAnimation>
             </div>
 
@@ -60,10 +72,10 @@ const StayPlayCasino = () => {
                 </RevealAnimation> */}
               </div>
               <RevealAnimation delay={0.2} direction="right">
-                <h2 className="text-[42px] text-accent">Make a weekend of it!</h2>
+                <h2 className="text-[42px] max-md:text-[32px] text-accent">Make a weekend of it!</h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3} direction="right">
-                <p className="text-white/70 text-[13px] md:text-[15px] pt-1 pb-6 max-w-[92%]">
+                <p className="text-white/70 text-[13px] md:text-[15px] pt-1 pb-6 max-w-[92%] max-md:max-w-none">
                   Step inside and experience the action when you enter the gaming floor. Boasting over 700 of the
                   hottest{' '}
                   <a href="https://riverbendcasino.com/casino/slots" className="inline-anchor-light" target="_blank">
