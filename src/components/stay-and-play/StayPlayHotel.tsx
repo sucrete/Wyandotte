@@ -64,7 +64,7 @@ const StayPlayHotel = () => {
                   </RevealAnimation>
                 ))}
               </ul>
-              <RevealAnimation delay={0.2} offset={50} direction="left">
+              <RevealAnimation delay={0.7} offset={50} direction="left">
                 <LinkButton
                   href="https://www.reseze.net/servlet/WebresResDesk?hotelid=1518&buildingCode=rbh&rateCode=rivrbend"
                   className="btn btn-header-bushwood transition shadow-[0_10px_15px_-3px_#b992004f,0_4px_6px_-4px_#b992004f] hover:shadow-md hover:btn-white-dark hover:bg-[#4d0100] border-none"
