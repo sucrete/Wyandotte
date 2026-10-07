@@ -3,6 +3,7 @@ import { FireIcon } from '../svg-components/Logos';
 import Image from 'next/image';
 import { Check } from '@/icons';
 import ImageSwap from '../ui/ImageSwap';
+import LinkButton from '../ui/button/LinkButton';
 
 const HOTEL_IMAGES: [{ src: string; alt: string }, { src: string; alt: string }] = [
   { src: '/images/peoria-ridge/hotel/suite-bar.webp', alt: 'The bar inside a suite at River Bend Casino Hotel' },
@@ -53,7 +54,7 @@ const StayPlayHotel = () => {
                   night of excitement! Discover the bliss of comfort and convenience when you book today!
                 </p>
               </RevealAnimation>
-              <ul className="inline-grid grid-cols-2 max-md:gap-x-4 gap-x-10 gap-y-2.5 text-left pb-11 max-md:pb-2">
+              <ul className="inline-grid grid-cols-2 max-md:gap-x-4 gap-x-10 gap-y-2.5 text-left pb-6 max-md:pb-2">
                 {AMENITIES.map((item, index) => (
                   <RevealAnimation key={index} delay={0.3 + index * 0.05} direction="left" offset={35}>
                     <li key={item} className="flex items-start gap-3">
@@ -63,6 +64,14 @@ const StayPlayHotel = () => {
                   </RevealAnimation>
                 ))}
               </ul>
+              <RevealAnimation delay={0.2} offset={50} direction="left">
+                <LinkButton
+                  href="https://www.reseze.net/servlet/WebresResDesk?hotelid=1518&buildingCode=rbh&rateCode=rivrbend"
+                  className="btn btn-header-bushwood transition shadow-[0_10px_15px_-3px_#b992004f,0_4px_6px_-4px_#b992004f] hover:shadow-md hover:btn-white-dark hover:bg-[#4d0100] border-none"
+                  target="_blank">
+                  Book Your Stay!
+                </LinkButton>
+              </RevealAnimation>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-6">

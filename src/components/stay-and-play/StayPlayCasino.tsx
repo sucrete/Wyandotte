@@ -105,7 +105,7 @@ const StayPlayCasino = () => {
               <RevealAnimation delay={0.2} offset={50} direction="right">
                 <LinkButton
                   href="https://riverbendcasino.com/casino/club-wyandotte"
-                  className="btn btn-header-bushwood transition-all shadow-lg/20 hover:shadow-lg/20 hover:btn-white-dark hover:bg-[#4d0100] border-none"
+                  className="btn btn-header-bushwood transition shadow-lg/20 hover:shadow-lg/20 hover:btn-white-dark hover:bg-[#4d0100] border-none"
                   target="_blank">
                   Join Club Wyandotte!
                 </LinkButton>
