@@ -65,7 +65,7 @@ const StayPlayDining = () => {
                   Or perhaps you’d prefer a more fast paced option, which can be found at the{' '}
                   <a
                     className="inline-anchor"
-                    href="https://riverbendcasino.com/dining/twin-bridges-restaurant"
+                    href="https://riverbendcasino.com/dining/deli"
                     target="_blank">
                     Casino Deli
                   </a>
