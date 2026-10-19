@@ -25,8 +25,8 @@ const StayAndPlay = () => {
           overlayOpacity=".9"
           heroText="Stay & Play"
         />
-        <StayPlayCasino />
         <StayPlayHotel />
+        <StayPlayCasino />
         <StayPlayDining />
         {/* <StayPlayCourse /> */}
       </main>
